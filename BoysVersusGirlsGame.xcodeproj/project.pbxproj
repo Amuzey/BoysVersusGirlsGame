@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		8AB4E2CA29003D0200195D17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2C929003D0200195D17 /* AppDelegate.swift */; };
 		8AB4E2CC29003D0200195D17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2CB29003D0200195D17 /* SceneDelegate.swift */; };
-		8AB4E2CE29003D0200195D17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2CD29003D0200195D17 /* ViewController.swift */; };
-		8AB4E2D129003D0200195D17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB4E2CF29003D0200195D17 /* Main.storyboard */; };
+		8AB4E2CE29003D0200195D17 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2CD29003D0200195D17 /* StartViewController.swift */; };
 		8AB4E2D329003D0400195D17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AB4E2D229003D0400195D17 /* Assets.xcassets */; };
 		8AB4E2D629003D0400195D17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB4E2D429003D0400195D17 /* LaunchScreen.storyboard */; };
+		8AB4E2DE29003F5E00195D17 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2DD29003F5E00195D17 /* SettingsViewController.swift */; };
+		8AB4E2E029003F6800195D17 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2DF29003F6800195D17 /* RulesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8AB4E2C629003D0200195D17 /* BoysVersusGirlsGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoysVersusGirlsGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB4E2C929003D0200195D17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AB4E2CB29003D0200195D17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8AB4E2CD29003D0200195D17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8AB4E2D029003D0200195D17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8AB4E2CD29003D0200195D17 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		8AB4E2D229003D0400195D17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AB4E2D529003D0400195D17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8AB4E2D729003D0400195D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AB4E2DD29003F5E00195D17 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8AB4E2DF29003F6800195D17 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				8AB4E2C929003D0200195D17 /* AppDelegate.swift */,
 				8AB4E2CB29003D0200195D17 /* SceneDelegate.swift */,
-				8AB4E2CD29003D0200195D17 /* ViewController.swift */,
-				8AB4E2CF29003D0200195D17 /* Main.storyboard */,
+				8AB4E2CD29003D0200195D17 /* StartViewController.swift */,
+				8AB4E2DD29003F5E00195D17 /* SettingsViewController.swift */,
+				8AB4E2DF29003F6800195D17 /* RulesViewController.swift */,
 				8AB4E2D229003D0400195D17 /* Assets.xcassets */,
 				8AB4E2D429003D0400195D17 /* LaunchScreen.storyboard */,
 				8AB4E2D729003D0400195D17 /* Info.plist */,
@@ -127,7 +130,6 @@
 			files = (
 				8AB4E2D629003D0400195D17 /* LaunchScreen.storyboard in Resources */,
 				8AB4E2D329003D0400195D17 /* Assets.xcassets in Resources */,
-				8AB4E2D129003D0200195D17 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +140,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AB4E2CE29003D0200195D17 /* ViewController.swift in Sources */,
+				8AB4E2E029003F6800195D17 /* RulesViewController.swift in Sources */,
+				8AB4E2CE29003D0200195D17 /* StartViewController.swift in Sources */,
 				8AB4E2CA29003D0200195D17 /* AppDelegate.swift in Sources */,
 				8AB4E2CC29003D0200195D17 /* SceneDelegate.swift in Sources */,
+				8AB4E2DE29003F5E00195D17 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8AB4E2CF29003D0200195D17 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8AB4E2D029003D0200195D17 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8AB4E2D429003D0400195D17 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +288,7 @@
 				INFOPLIST_FILE = BoysVersusGirlsGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +316,7 @@
 				INFOPLIST_FILE = BoysVersusGirlsGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
