@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8949F4AF2900412400A77EDB /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949F4AE2900412400A77EDB /* StartViewModel.swift */; };
+		8949F4B22900414B00A77EDB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949F4B12900414B00A77EDB /* SettingsViewModel.swift */; };
+		8949F4B52900415C00A77EDB /* RulesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949F4B42900415C00A77EDB /* RulesViewModel.swift */; };
 		8AB4E2CA29003D0200195D17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2C929003D0200195D17 /* AppDelegate.swift */; };
 		8AB4E2CC29003D0200195D17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2CB29003D0200195D17 /* SceneDelegate.swift */; };
 		8AB4E2CE29003D0200195D17 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2CD29003D0200195D17 /* StartViewController.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8949F4AE2900412400A77EDB /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
+		8949F4B12900414B00A77EDB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		8949F4B42900415C00A77EDB /* RulesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewModel.swift; sourceTree = "<group>"; };
 		8AB4E2C629003D0200195D17 /* BoysVersusGirlsGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoysVersusGirlsGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB4E2C929003D0200195D17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AB4E2CB29003D0200195D17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +45,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8949F4AA290040FB00A77EDB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				8AB4E2C929003D0200195D17 /* AppDelegate.swift */,
+				8AB4E2CB29003D0200195D17 /* SceneDelegate.swift */,
+				8AB4E2D729003D0400195D17 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		8949F4AB2900410500A77EDB /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8AB4E2D429003D0400195D17 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		8949F4AC2900410D00A77EDB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8AB4E2D229003D0400195D17 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8949F4AD2900411400A77EDB /* StartViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8AB4E2CD29003D0200195D17 /* StartViewController.swift */,
+				8949F4AE2900412400A77EDB /* StartViewModel.swift */,
+			);
+			path = StartViewController;
+			sourceTree = "<group>";
+		};
+		8949F4B02900413B00A77EDB /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8AB4E2DD29003F5E00195D17 /* SettingsViewController.swift */,
+				8949F4B12900414B00A77EDB /* SettingsViewModel.swift */,
+			);
+			path = SettingsViewController;
+			sourceTree = "<group>";
+		};
+		8949F4B32900414F00A77EDB /* RulesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8AB4E2DF29003F6800195D17 /* RulesViewController.swift */,
+				8949F4B42900415C00A77EDB /* RulesViewModel.swift */,
+			);
+			path = RulesViewController;
+			sourceTree = "<group>";
+		};
 		8AB4E2BD29003D0200195D17 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +117,12 @@
 		8AB4E2C829003D0200195D17 /* BoysVersusGirlsGame */ = {
 			isa = PBXGroup;
 			children = (
-				8AB4E2C929003D0200195D17 /* AppDelegate.swift */,
-				8AB4E2CB29003D0200195D17 /* SceneDelegate.swift */,
-				8AB4E2CD29003D0200195D17 /* StartViewController.swift */,
-				8AB4E2DD29003F5E00195D17 /* SettingsViewController.swift */,
-				8AB4E2DF29003F6800195D17 /* RulesViewController.swift */,
-				8AB4E2D229003D0400195D17 /* Assets.xcassets */,
-				8AB4E2D429003D0400195D17 /* LaunchScreen.storyboard */,
-				8AB4E2D729003D0400195D17 /* Info.plist */,
+				8949F4AA290040FB00A77EDB /* Application */,
+				8949F4AD2900411400A77EDB /* StartViewController */,
+				8949F4B02900413B00A77EDB /* SettingsViewController */,
+				8949F4B32900414F00A77EDB /* RulesViewController */,
+				8949F4AC2900410D00A77EDB /* Resources */,
+				8949F4AB2900410500A77EDB /* Storyboard */,
 			);
 			path = BoysVersusGirlsGame;
 			sourceTree = "<group>";
@@ -141,10 +198,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AB4E2E029003F6800195D17 /* RulesViewController.swift in Sources */,
+				8949F4AF2900412400A77EDB /* StartViewModel.swift in Sources */,
 				8AB4E2CE29003D0200195D17 /* StartViewController.swift in Sources */,
 				8AB4E2CA29003D0200195D17 /* AppDelegate.swift in Sources */,
 				8AB4E2CC29003D0200195D17 /* SceneDelegate.swift in Sources */,
 				8AB4E2DE29003F5E00195D17 /* SettingsViewController.swift in Sources */,
+				8949F4B52900415C00A77EDB /* RulesViewModel.swift in Sources */,
+				8949F4B22900414B00A77EDB /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
