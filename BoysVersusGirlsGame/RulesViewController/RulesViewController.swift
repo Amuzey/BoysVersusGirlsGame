@@ -11,11 +11,6 @@ class RulesViewController: UIViewController {
     
     private var viewModel: RulesViewModelProtocol?
     
-    let rulesLabel = UILabel(text: DataStorage.shared.rules,
-                             font: .avenir20(),
-                             numberOfLines: 0,
-                             tintColor: .green)
-    
     let showDevelopersButton = UIButton(title: "Разработчики",
                                         titleColor: .white,
                                         backgroundColor: .red)
@@ -23,35 +18,38 @@ class RulesViewController: UIViewController {
     let rateTheAppButton = UIButton(title: "Оценить",
                                     titleColor: .white,
                                     backgroundColor: .red)
-    var scrollView = UIScrollView() {
-        didSet {
-            scrollView = UIScrollView(arrangedSubviews: rulesLabel)
-            
-            
-        }
-    }
+    
+    
+    
+    let scrollView = UIScrollView(arrangedSubviews: UILabel(
+        text: DataStorage.shared.rules,
+        font: .avenir20(), numberOfLines: 0,
+        tintColor: .black)
+    )
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = RulesViewModel()
         setupConstraints()
-        scrollView.addSubview(rulesLabel)
+        
         view.backgroundColor = .white
         
-    
+        
+        
     }
 }
 
 // MARK: - Setup constrains
 extension RulesViewController {
     
-   private func setupConstraints() {
+    private func setupConstraints() {
         
         let stackViewButton = UIStackView(arrangedSubviews: [showDevelopersButton, rateTheAppButton],
                                           axis: .vertical, spacing: 10)
         
-       setupSubviews(stackViewButton, scrollView)
-       
+        setupSubviews(stackViewButton, scrollView)
+        
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
