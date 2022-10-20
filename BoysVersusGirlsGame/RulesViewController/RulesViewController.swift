@@ -9,23 +9,13 @@ import UIKit
 
 class RulesViewController: UIViewController {
 
+    private var viewModel: RulesViewModelProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = RulesViewModel()
         view.backgroundColor = .green
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 // MARK: - SwiftUI
@@ -43,6 +33,7 @@ struct RulesVCProvider: PreviewProvider {
         func makeUIViewController(context: Context) -> some UIViewController {
             viewController
         }
+        
         func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
             
         }

@@ -8,14 +8,21 @@
 import UIKit
 
 class StartViewController: UIViewController {
-
+    
+    let logoImageView: UIImageView = {
+        let logoImageView = UIImageView()
+        
+        return logoImageView
+    }()
+    
+//    let button = UIButton(title: "Start", titleColor: .white, backgroundColor: .orange, font: .systemFont(ofSize: 21), isShadow: true)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "www"
         view.backgroundColor = .red
+        
+//        view.addSubview(button)
     }
-
-
 }
 
 // MARK: - SwiftUI
