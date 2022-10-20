@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+protocol SettingViewModelProtocol {
+    
+}
+
+class SettingViewModel: SettingViewModelProtocol {
+    
+}
