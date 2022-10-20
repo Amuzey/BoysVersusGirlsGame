@@ -15,6 +15,7 @@
 		8A3124562901698400BCCBB2 /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3124552901698400BCCBB2 /* UILabel + Extension.swift */; };
 		8A31245829016AA900BCCBB2 /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A31245729016AA900BCCBB2 /* UIFont + Extension.swift */; };
 		8A31245A29016C9200BCCBB2 /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A31245929016C9200BCCBB2 /* UIStackView + Extension.swift */; };
+		8A31245C2901775F00BCCBB2 /* UIScrollView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A31245B2901775E00BCCBB2 /* UIScrollView + Extension.swift */; };
 		8AB4E2CA29003D0200195D17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2C929003D0200195D17 /* AppDelegate.swift */; };
 		8AB4E2CC29003D0200195D17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2CB29003D0200195D17 /* SceneDelegate.swift */; };
 		8AB4E2CE29003D0200195D17 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2CD29003D0200195D17 /* StartViewController.swift */; };
@@ -33,6 +34,7 @@
 		8A3124552901698400BCCBB2 /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
 		8A31245729016AA900BCCBB2 /* UIFont + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
 		8A31245929016C9200BCCBB2 /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
+		8A31245B2901775E00BCCBB2 /* UIScrollView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView + Extension.swift"; sourceTree = "<group>"; };
 		8AB4E2C629003D0200195D17 /* BoysVersusGirlsGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoysVersusGirlsGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB4E2C929003D0200195D17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AB4E2CB29003D0200195D17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				8A31245229015D0100BCCBB2 /* UIButton + Extension.swift */,
+				8A31245B2901775E00BCCBB2 /* UIScrollView + Extension.swift */,
 				8A3124552901698400BCCBB2 /* UILabel + Extension.swift */,
 				8A31245729016AA900BCCBB2 /* UIFont + Extension.swift */,
 				8A31245929016C9200BCCBB2 /* UIStackView + Extension.swift */,
@@ -249,6 +252,7 @@
 				89C60465290162FE0071A198 /* DataStorage.swift in Sources */,
 				8949F4B52900415C00A77EDB /* RulesViewModel.swift in Sources */,
 				8949F4B22900414B00A77EDB /* SettingsViewModel.swift in Sources */,
+				8A31245C2901775F00BCCBB2 /* UIScrollView + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
