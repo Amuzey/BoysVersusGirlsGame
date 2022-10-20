@@ -11,7 +11,6 @@ extension UIScrollView {
     
     convenience init(arrangedSubviews: UIView) {
         self.init()
-        
         self.addSubview(arrangedSubviews)
         arrangedSubviews.translatesAutoresizingMaskIntoConstraints = false
         
@@ -19,7 +18,9 @@ extension UIScrollView {
             arrangedSubviews.topAnchor.constraint(equalTo: topAnchor),
             arrangedSubviews.bottomAnchor.constraint(equalTo: bottomAnchor),
             arrangedSubviews.leadingAnchor.constraint(equalTo: leadingAnchor),
-            arrangedSubviews.trailingAnchor.constraint(equalTo: trailingAnchor)
+            arrangedSubviews.trailingAnchor.constraint(equalTo: trailingAnchor),
+            arrangedSubviews.widthAnchor.constraint(equalTo: widthAnchor)
         ])
+        
     }
 }
