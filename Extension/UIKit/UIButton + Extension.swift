@@ -13,7 +13,7 @@ extension UIButton {
                      titleColor: UIColor,
                      backgroundColor: UIColor,
                      font: UIFont?,
-                     isSwadow: Bool = false,
+                     isShadow: Bool = false,
                      cornerRadius: CGFloat = 25) {
         self.init(type: .system)
         
@@ -23,7 +23,7 @@ extension UIButton {
         self.titleLabel?.font = font
         self.layer.cornerRadius = cornerRadius
         
-        if isSwadow {
+        if isShadow {
             self.layer.shadowColor = UIColor.black.cgColor
             self.layer.shadowRadius = 4
             self.layer.shadowOpacity = 0.2
