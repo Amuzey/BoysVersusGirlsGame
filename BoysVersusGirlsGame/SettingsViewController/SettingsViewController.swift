@@ -12,7 +12,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .blue
     }
     
 
@@ -26,4 +26,25 @@ class SettingsViewController: UIViewController {
     }
     */
 
+}
+
+// MARK: - SwiftUI
+import SwiftUI
+
+struct SettingsVCProvider: PreviewProvider {
+    static var previews: some View {
+        ContainerView().edgesIgnoringSafeArea(.all)
+    }
+    
+    struct ContainerView: UIViewControllerRepresentable {
+        
+        let viewController = SettingsViewController()
+        
+        func makeUIViewController(context: Context) -> some UIViewController {
+            viewController
+        }
+        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+            
+        }
+    }
 }

@@ -12,7 +12,9 @@ class RulesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .green
+        
+        
     }
     
 
@@ -26,4 +28,25 @@ class RulesViewController: UIViewController {
     }
     */
 
+}
+
+// MARK: - SwiftUI
+import SwiftUI
+
+struct RulesVCProvider: PreviewProvider {
+    static var previews: some View {
+        ContainerView().edgesIgnoringSafeArea(.all)
+    }
+    
+    struct ContainerView: UIViewControllerRepresentable {
+        
+        let viewController = RulesViewController()
+        
+        func makeUIViewController(context: Context) -> some UIViewController {
+            viewController
+        }
+        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+            
+        }
+    }
 }
