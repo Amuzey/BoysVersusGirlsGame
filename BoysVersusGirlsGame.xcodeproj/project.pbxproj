@@ -10,6 +10,7 @@
 		8949F4AF2900412400A77EDB /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949F4AE2900412400A77EDB /* StartViewModel.swift */; };
 		8949F4B22900414B00A77EDB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949F4B12900414B00A77EDB /* SettingsViewModel.swift */; };
 		8949F4B52900415C00A77EDB /* RulesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949F4B42900415C00A77EDB /* RulesViewModel.swift */; };
+		8A31245329015D0100BCCBB2 /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A31245229015D0100BCCBB2 /* UIButton + Extension.swift */; };
 		8AB4E2CA29003D0200195D17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2C929003D0200195D17 /* AppDelegate.swift */; };
 		8AB4E2CC29003D0200195D17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2CB29003D0200195D17 /* SceneDelegate.swift */; };
 		8AB4E2CE29003D0200195D17 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2CD29003D0200195D17 /* StartViewController.swift */; };
@@ -23,6 +24,7 @@
 		8949F4AE2900412400A77EDB /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
 		8949F4B12900414B00A77EDB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		8949F4B42900415C00A77EDB /* RulesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewModel.swift; sourceTree = "<group>"; };
+		8A31245229015D0100BCCBB2 /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
 		8AB4E2C629003D0200195D17 /* BoysVersusGirlsGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoysVersusGirlsGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB4E2C929003D0200195D17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AB4E2CB29003D0200195D17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,10 +100,27 @@
 			path = RulesViewController;
 			sourceTree = "<group>";
 		};
+		8A31245129015B6100BCCBB2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8A31245429015D0E00BCCBB2 /* UIKit */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8A31245429015D0E00BCCBB2 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				8A31245229015D0100BCCBB2 /* UIButton + Extension.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		8AB4E2BD29003D0200195D17 = {
 			isa = PBXGroup;
 			children = (
 				8AB4E2C829003D0200195D17 /* BoysVersusGirlsGame */,
+				8A31245129015B6100BCCBB2 /* Extension */,
 				8AB4E2C729003D0200195D17 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -202,6 +221,7 @@
 				8AB4E2CE29003D0200195D17 /* StartViewController.swift in Sources */,
 				8AB4E2CA29003D0200195D17 /* AppDelegate.swift in Sources */,
 				8AB4E2CC29003D0200195D17 /* SceneDelegate.swift in Sources */,
+				8A31245329015D0100BCCBB2 /* UIButton + Extension.swift in Sources */,
 				8AB4E2DE29003F5E00195D17 /* SettingsViewController.swift in Sources */,
 				8949F4B52900415C00A77EDB /* RulesViewModel.swift in Sources */,
 				8949F4B22900414B00A77EDB /* SettingsViewModel.swift in Sources */,
