@@ -12,9 +12,9 @@ extension UIButton {
     convenience init(title: String,
                      titleColor: UIColor,
                      backgroundColor: UIColor,
-                     font: UIFont?,
+                     font: UIFont? = .avenir20(),
                      isShadow: Bool = false,
-                     cornerRadius: CGFloat = 25) {
+                     cornerRadius: CGFloat = 15) {
         self.init(type: .system)
         
         self.setTitle(title, for: .normal)
