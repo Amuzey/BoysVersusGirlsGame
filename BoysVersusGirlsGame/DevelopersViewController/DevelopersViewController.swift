@@ -41,8 +41,8 @@ extension DevelopersViewController {
     
     private func setupConstraints() {
         
-        let developerStackView = UIStackView(arrangedSubviews: [alexeyView, antonView], axis: .vertical, spacing: 20)
-        
+        let developerStackView = UIStackView(arrangedSubviews: [alexeyView, antonView], axis: .vertical, spacing: 20, distribution: .fillEqually)
+       
         
         setupSubviews(developerStackView)
         
@@ -50,6 +50,9 @@ extension DevelopersViewController {
             developerStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             developerStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             developerStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+            developerStackView.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5)
+        
+            
         ])
         
     }
