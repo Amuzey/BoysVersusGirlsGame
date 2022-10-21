@@ -16,6 +16,9 @@
 		8A31245829016AA900BCCBB2 /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A31245729016AA900BCCBB2 /* UIFont + Extension.swift */; };
 		8A31245A29016C9200BCCBB2 /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A31245929016C9200BCCBB2 /* UIStackView + Extension.swift */; };
 		8A31245C2901775F00BCCBB2 /* UIScrollView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A31245B2901775E00BCCBB2 /* UIScrollView + Extension.swift */; };
+		8A3124612902B49900BCCBB2 /* TeamBuildingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3124602902B49900BCCBB2 /* TeamBuildingViewController.swift */; };
+		8A3124642902B4BD00BCCBB2 /* TeamBuildingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3124632902B4BD00BCCBB2 /* TeamBuildingViewModel.swift */; };
+		8A3124662902B53A00BCCBB2 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3124652902B53A00BCCBB2 /* OneLineTextField.swift */; };
 		8AB4E2CA29003D0200195D17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2C929003D0200195D17 /* AppDelegate.swift */; };
 		8AB4E2CC29003D0200195D17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2CB29003D0200195D17 /* SceneDelegate.swift */; };
 		8AB4E2CE29003D0200195D17 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2CD29003D0200195D17 /* StartViewController.swift */; };
@@ -35,6 +38,9 @@
 		8A31245729016AA900BCCBB2 /* UIFont + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
 		8A31245929016C9200BCCBB2 /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
 		8A31245B2901775E00BCCBB2 /* UIScrollView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView + Extension.swift"; sourceTree = "<group>"; };
+		8A3124602902B49900BCCBB2 /* TeamBuildingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamBuildingViewController.swift; sourceTree = "<group>"; };
+		8A3124632902B4BD00BCCBB2 /* TeamBuildingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamBuildingViewModel.swift; sourceTree = "<group>"; };
+		8A3124652902B53A00BCCBB2 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 		8AB4E2C629003D0200195D17 /* BoysVersusGirlsGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoysVersusGirlsGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB4E2C929003D0200195D17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AB4E2CB29003D0200195D17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 		8A31245129015B6100BCCBB2 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				8A3124652902B53A00BCCBB2 /* OneLineTextField.swift */,
 				8A31245429015D0E00BCCBB2 /* UIKit */,
 			);
 			path = Extension;
@@ -136,6 +143,15 @@
 				8A31245929016C9200BCCBB2 /* UIStackView + Extension.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		8A3124622902B49F00BCCBB2 /* TeamBuildingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8A3124602902B49900BCCBB2 /* TeamBuildingViewController.swift */,
+				8A3124632902B4BD00BCCBB2 /* TeamBuildingViewModel.swift */,
+			);
+			path = TeamBuildingViewController;
 			sourceTree = "<group>";
 		};
 		8AB4E2BD29003D0200195D17 = {
@@ -159,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				8949F4AA290040FB00A77EDB /* Application */,
+				8A3124622902B49F00BCCBB2 /* TeamBuildingViewController */,
 				8949F4AD2900411400A77EDB /* StartViewController */,
 				8949F4B02900413B00A77EDB /* SettingsViewController */,
 				8949F4B32900414F00A77EDB /* RulesViewController */,
@@ -246,12 +263,15 @@
 				8AB4E2CE29003D0200195D17 /* StartViewController.swift in Sources */,
 				8AB4E2CA29003D0200195D17 /* AppDelegate.swift in Sources */,
 				8AB4E2CC29003D0200195D17 /* SceneDelegate.swift in Sources */,
+				8A3124662902B53A00BCCBB2 /* OneLineTextField.swift in Sources */,
+				8A3124642902B4BD00BCCBB2 /* TeamBuildingViewModel.swift in Sources */,
 				8A31245329015D0100BCCBB2 /* UIButton + Extension.swift in Sources */,
 				8A3124562901698400BCCBB2 /* UILabel + Extension.swift in Sources */,
 				8AB4E2DE29003F5E00195D17 /* SettingsViewController.swift in Sources */,
 				89C60465290162FE0071A198 /* DataStorage.swift in Sources */,
 				8949F4B52900415C00A77EDB /* RulesViewModel.swift in Sources */,
 				8949F4B22900414B00A77EDB /* SettingsViewModel.swift in Sources */,
+				8A3124612902B49900BCCBB2 /* TeamBuildingViewController.swift in Sources */,
 				8A31245C2901775F00BCCBB2 /* UIScrollView + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
