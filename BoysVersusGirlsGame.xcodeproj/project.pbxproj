@@ -19,6 +19,9 @@
 		8A3124612902B49900BCCBB2 /* TeamBuildingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3124602902B49900BCCBB2 /* TeamBuildingViewController.swift */; };
 		8A3124642902B4BD00BCCBB2 /* TeamBuildingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3124632902B4BD00BCCBB2 /* TeamBuildingViewModel.swift */; };
 		8A3124662902B53A00BCCBB2 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3124652902B53A00BCCBB2 /* OneLineTextField.swift */; };
+		8A3124682902D45E00BCCBB2 /* DevelopersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3124672902D45E00BCCBB2 /* DevelopersViewController.swift */; };
+		8A31246B2902D49C00BCCBB2 /* DevelopersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A31246A2902D49C00BCCBB2 /* DevelopersViewModel.swift */; };
+		8A31246F2902DD4900BCCBB2 /* DeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A31246E2902DD4900BCCBB2 /* DeveloperView.swift */; };
 		8AB4E2CA29003D0200195D17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2C929003D0200195D17 /* AppDelegate.swift */; };
 		8AB4E2CC29003D0200195D17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2CB29003D0200195D17 /* SceneDelegate.swift */; };
 		8AB4E2CE29003D0200195D17 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2CD29003D0200195D17 /* StartViewController.swift */; };
@@ -41,6 +44,9 @@
 		8A3124602902B49900BCCBB2 /* TeamBuildingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamBuildingViewController.swift; sourceTree = "<group>"; };
 		8A3124632902B4BD00BCCBB2 /* TeamBuildingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamBuildingViewModel.swift; sourceTree = "<group>"; };
 		8A3124652902B53A00BCCBB2 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
+		8A3124672902D45E00BCCBB2 /* DevelopersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersViewController.swift; sourceTree = "<group>"; };
+		8A31246A2902D49C00BCCBB2 /* DevelopersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersViewModel.swift; sourceTree = "<group>"; };
+		8A31246E2902DD4900BCCBB2 /* DeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperView.swift; sourceTree = "<group>"; };
 		8AB4E2C629003D0200195D17 /* BoysVersusGirlsGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoysVersusGirlsGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB4E2C929003D0200195D17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AB4E2CB29003D0200195D17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				8A3124652902B53A00BCCBB2 /* OneLineTextField.swift */,
+				8A31246E2902DD4900BCCBB2 /* DeveloperView.swift */,
 				8A31245429015D0E00BCCBB2 /* UIKit */,
 			);
 			path = Extension;
@@ -154,6 +161,15 @@
 			path = TeamBuildingViewController;
 			sourceTree = "<group>";
 		};
+		8A3124692902D47900BCCBB2 /* DevelopersViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8A3124672902D45E00BCCBB2 /* DevelopersViewController.swift */,
+				8A31246A2902D49C00BCCBB2 /* DevelopersViewModel.swift */,
+			);
+			path = DevelopersViewController;
+			sourceTree = "<group>";
+		};
 		8AB4E2BD29003D0200195D17 = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +189,7 @@
 		8AB4E2C829003D0200195D17 /* BoysVersusGirlsGame */ = {
 			isa = PBXGroup;
 			children = (
-				8A31245129015B6100BCCBB2 /* Extension */,
+				8A3124692902D47900BCCBB2 /* DevelopersViewController */,
 				8949F4AA290040FB00A77EDB /* Application */,
 				8A3124622902B49F00BCCBB2 /* TeamBuildingViewController */,
 				8949F4AD2900411400A77EDB /* StartViewController */,
@@ -182,6 +198,7 @@
 				8949F4AC2900410D00A77EDB /* Resources */,
 				8949F4AB2900410500A77EDB /* Storyboard */,
 				89C604662901646A0071A198 /* Services */,
+				8A31245129015B6100BCCBB2 /* Extension */,
 			);
 			path = BoysVersusGirlsGame;
 			sourceTree = "<group>";
@@ -258,10 +275,12 @@
 			files = (
 				8A31245829016AA900BCCBB2 /* UIFont + Extension.swift in Sources */,
 				8AB4E2E029003F6800195D17 /* RulesViewController.swift in Sources */,
+				8A31246B2902D49C00BCCBB2 /* DevelopersViewModel.swift in Sources */,
 				8A31245A29016C9200BCCBB2 /* UIStackView + Extension.swift in Sources */,
 				8949F4AF2900412400A77EDB /* StartViewModel.swift in Sources */,
 				8AB4E2CE29003D0200195D17 /* StartViewController.swift in Sources */,
 				8AB4E2CA29003D0200195D17 /* AppDelegate.swift in Sources */,
+				8A31246F2902DD4900BCCBB2 /* DeveloperView.swift in Sources */,
 				8AB4E2CC29003D0200195D17 /* SceneDelegate.swift in Sources */,
 				8A3124662902B53A00BCCBB2 /* OneLineTextField.swift in Sources */,
 				8A3124642902B4BD00BCCBB2 /* TeamBuildingViewModel.swift in Sources */,
@@ -269,6 +288,7 @@
 				8A3124562901698400BCCBB2 /* UILabel + Extension.swift in Sources */,
 				8AB4E2DE29003F5E00195D17 /* SettingsViewController.swift in Sources */,
 				89C60465290162FE0071A198 /* DataStorage.swift in Sources */,
+				8A3124682902D45E00BCCBB2 /* DevelopersViewController.swift in Sources */,
 				8949F4B52900415C00A77EDB /* RulesViewModel.swift in Sources */,
 				8949F4B22900414B00A77EDB /* SettingsViewModel.swift in Sources */,
 				8A3124612902B49900BCCBB2 /* TeamBuildingViewController.swift in Sources */,
