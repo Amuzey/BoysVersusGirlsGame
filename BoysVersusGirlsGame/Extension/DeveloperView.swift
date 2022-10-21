@@ -22,6 +22,9 @@ class DeveloperView: UIView {
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
         text.translatesAutoresizingMaskIntoConstraints = false
+        text.textColor = text.tintColor
+        imageView.layer.cornerRadius = 20
+        imageView.clipsToBounds = true
         self.addSubview(imageView)
         self.addSubview(text)
         
@@ -30,6 +33,7 @@ class DeveloperView: UIView {
             imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
             imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor)
+           
         ])
         
         NSLayoutConstraint.activate([

@@ -46,7 +46,7 @@ extension RulesViewController {
     private func setupConstraints() {
         
         let stackViewButton = UIStackView(arrangedSubviews: [showDevelopersButton, rateTheAppButton],
-                                          axis: .vertical, spacing: 10)
+                                          axis: .vertical, spacing: 10, distribution: .fill)
         
         setupSubviews(stackViewButton, scrollView)
         
