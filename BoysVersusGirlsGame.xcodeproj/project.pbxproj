@@ -158,7 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				8AB4E2C829003D0200195D17 /* BoysVersusGirlsGame */,
-				8A31245129015B6100BCCBB2 /* Extension */,
 				8AB4E2C729003D0200195D17 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -174,6 +173,7 @@
 		8AB4E2C829003D0200195D17 /* BoysVersusGirlsGame */ = {
 			isa = PBXGroup;
 			children = (
+				8A31245129015B6100BCCBB2 /* Extension */,
 				8949F4AA290040FB00A77EDB /* Application */,
 				8A3124622902B49F00BCCBB2 /* TeamBuildingViewController */,
 				8949F4AD2900411400A77EDB /* StartViewController */,
