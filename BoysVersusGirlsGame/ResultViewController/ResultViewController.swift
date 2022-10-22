@@ -10,21 +10,15 @@ import UIKit
 class ResultViewController: UIViewController {
     
     let cupImageView = UIImageView(image: UIImage(named: "cup"))
-    let resultLabel = UILabel(text: "Победила команда Дереволазы ", font: .avenir20(), numberOfLines: 2, tintColor: .red)
+    let resultLabel = UILabel(text: "Победила команда: Дереволазы ", font: .avenir20(), numberOfLines: 2, tintColor: .gray)
     let resultView = ResultView(boysResult: "4", girlsResult: "7")
     let answerButton = UIButton(title: "Ответы", titleColor: .white, backgroundColor: .red)
     let repeatButton = UIButton(title: "Начать заново", titleColor: .white, backgroundColor: .red)
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupConstraints()
-        // Do any additional setup after loading the view.
     }
-    
-    
-    
     /*
      // MARK: - Navigation
      
@@ -34,21 +28,17 @@ class ResultViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
-    
 }
+
 //MARK: - Setup Constrains
 extension ResultViewController {
     
     private func setupConstraints() {
         
-        
-        let infoStackView = UIStackView(arrangedSubviews: [resultLabel, resultView, answerButton], axis: .vertical, spacing: 5, distribution: .fillEqually)
-        
+        let infoStackView = UIStackView(arrangedSubviews: [resultLabel, resultView, answerButton], axis: .vertical, spacing: 10, distribution: .fillProportionally)
         let resultStackView = UIStackView(arrangedSubviews: [cupImageView, infoStackView, repeatButton], axis: .vertical, spacing: 40, distribution: .equalCentering)
         
         setupSubviews(resultStackView)
-        
-        
         
         NSLayoutConstraint.activate([
             resultStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),

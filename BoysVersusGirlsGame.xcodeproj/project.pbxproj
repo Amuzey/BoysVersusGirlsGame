@@ -205,13 +205,13 @@
 		8AB4E2C829003D0200195D17 /* BoysVersusGirlsGame */ = {
 			isa = PBXGroup;
 			children = (
-				8A76A355290468FC001D38BD /* ResultViewController */,
-				8A3124692902D47900BCCBB2 /* DevelopersViewController */,
 				8949F4AA290040FB00A77EDB /* Application */,
-				8A3124622902B49F00BCCBB2 /* TeamBuildingViewController */,
 				8949F4AD2900411400A77EDB /* StartViewController */,
 				8949F4B02900413B00A77EDB /* SettingsViewController */,
 				8949F4B32900414F00A77EDB /* RulesViewController */,
+				8A3124692902D47900BCCBB2 /* DevelopersViewController */,
+				8A3124622902B49F00BCCBB2 /* TeamBuildingViewController */,
+				8A76A355290468FC001D38BD /* ResultViewController */,
 				8949F4AC2900410D00A77EDB /* Resources */,
 				8949F4AB2900410500A77EDB /* Storyboard */,
 				89C604662901646A0071A198 /* Services */,
