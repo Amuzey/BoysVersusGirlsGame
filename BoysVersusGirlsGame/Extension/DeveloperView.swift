@@ -22,7 +22,6 @@ class DeveloperView: UIView {
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
         text.translatesAutoresizingMaskIntoConstraints = false
-        text.textColor = text.tintColor
         imageView.layer.cornerRadius = 20
         imageView.clipsToBounds = true
         self.addSubview(imageView)

@@ -14,6 +14,6 @@ extension UILabel {
         self.text = text
         self.font = font
         self.numberOfLines = numberOfLines
-        self.tintColor = tintColor
+        self.textColor = tintColor
     }
 }

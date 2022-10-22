@@ -16,4 +16,8 @@ extension UIFont {
     static func avenir26() -> UIFont? {
         UIFont(name: "avenir", size: 26)
     }
+    
+    static func avenir35() -> UIFont? {
+        UIFont(name: "avenir", size: 35)
+    }
 }

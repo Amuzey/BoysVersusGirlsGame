@@ -9,7 +9,7 @@ import UIKit
 
 class TeamBuildingViewController: UIViewController {
     
-    let headerLabel = UILabel(text: "Введите название Женской команды:", font: .avenir20(), numberOfLines: 0, tintColor: .black)
+    let headerLabel = UILabel(text: "Введите название Женской команды:", font: .avenir35(), numberOfLines: 0, tintColor: .black)
     let teamNameTextField = OneLineTextField(font: .avenir20())
     let continuedButton = UIButton(title: "Продолжить", titleColor: .white, backgroundColor: .red)
     

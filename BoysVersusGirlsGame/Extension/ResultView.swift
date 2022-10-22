@@ -11,10 +11,13 @@ class ResultView: UIView {
     
     convenience init(boysResult: String, girlsResult: String) {
         self.init()
-        self.backgroundColor = .systemPink
         
-        let boysLabel = UILabel(text: boysResult, font: .avenir26(), numberOfLines: 1, tintColor: .white)
-        let girlsLabel = UILabel(text: girlsResult, font: .avenir26(), numberOfLines: 1, tintColor: .white)
+        self.backgroundColor = .blue
+        self.layer.cornerRadius = 20
+        
+        let boysLabel = UILabel(text: boysResult, font: .avenir35(), numberOfLines: 1, tintColor: .white)
+        let girlsLabel = UILabel(text: girlsResult, font: .avenir35(), numberOfLines: 1, tintColor: .white)
+        
         
         let stackView = UIStackView(arrangedSubviews: [boysLabel, girlsLabel], axis: .horizontal, spacing: 20, distribution: .fill)
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -22,9 +25,10 @@ class ResultView: UIView {
         
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: topAnchor, constant: 1),
-            stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
-            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
-            stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -1)
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
+            stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -1),
+            stackView.heightAnchor.constraint(equalToConstant: 100)
         ])
     }
 }
