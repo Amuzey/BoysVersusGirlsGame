@@ -19,24 +19,17 @@ class RulesViewController: UIViewController {
                                     titleColor: .white,
                                     backgroundColor: .red)
     
-    
-    
     let scrollView = UIScrollView(arrangedSubviews: UILabel(
         text: DataStorage.shared.rules,
         font: .avenir20(), numberOfLines: 0,
         tintColor: .black)
     )
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = RulesViewModel()
         setupConstraints()
-        
         view.backgroundColor = .white
-        
-        
-        
     }
 }
 
