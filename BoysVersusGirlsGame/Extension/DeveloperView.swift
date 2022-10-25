@@ -8,7 +8,11 @@
 import UIKit
 
 class DeveloperView: UIView {
-    convenience init(imageView: UIImageView, text: UILabel, backgroundColor: UIColor, cornerRadius: CGFloat, isShadow: Bool) {
+    convenience init(imageView: UIImageView,
+                     text: UILabel,
+                     backgroundColor: UIColor = .buttonColor(),
+                     cornerRadius: CGFloat,
+                     isShadow: Bool = true) {
         self.init()
         self.backgroundColor = backgroundColor
         self.layer.cornerRadius = cornerRadius

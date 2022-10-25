@@ -15,9 +15,7 @@ class DevelopersViewController: UIViewController {
                       font: .avenir20(),
                       numberOfLines: 0,
                       tintColor: .white),
-        backgroundColor: .red,
-        cornerRadius: 20,
-        isShadow: true
+        cornerRadius: 20
     )
     
     let antonView = DeveloperView(
@@ -25,14 +23,14 @@ class DevelopersViewController: UIViewController {
         text: UILabel(text: "iOS Developer, Anton Mazur",
                       font: .avenir20(), numberOfLines: 0,
                       tintColor: .white),
-        backgroundColor: .red,
-        cornerRadius: 20,
-        isShadow: true
+        cornerRadius: 20
     )
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .mainColor()
         setupConstraints()
+        
     }
 }
 
