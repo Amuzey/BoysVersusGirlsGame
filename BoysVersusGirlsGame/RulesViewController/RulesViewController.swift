@@ -13,23 +13,26 @@ class RulesViewController: UIViewController {
     
     let showDevelopersButton = UIButton(title: "Разработчики",
                                         titleColor: .white,
-                                        backgroundColor: .red)
+                                        backgroundColor: .buttonColor())
     
     let rateTheAppButton = UIButton(title: "Оценить",
                                     titleColor: .white,
-                                    backgroundColor: .red)
+                                    backgroundColor: .buttonColor())
     
     let scrollView = UIScrollView(arrangedSubviews: UILabel(
         text: DataStorage.shared.rules,
         font: .avenir20(), numberOfLines: 0,
-        tintColor: .black)
+        tintColor: .white)
     )
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = RulesViewModel()
         setupConstraints()
-        view.backgroundColor = .white
+        view.backgroundColor = .mainColor()
+        
+        scrollView.backgroundColor = .buttonColor()
+        scrollView.layer.cornerRadius = 15
     }
 }
 
@@ -51,8 +54,8 @@ extension RulesViewController {
         ])
         
         NSLayoutConstraint.activate([
-            stackViewButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            stackViewButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+            stackViewButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 60),
+            stackViewButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -60),
             stackViewButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40)
         ])
     }

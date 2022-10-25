@@ -24,14 +24,13 @@ class StartViewController: UIViewController {
         setupNavigationBar()
         setupConstraints()
     }
-    
+
     private func setupNavigationBar() {
         let settingsButton = UIBarButtonItem(image: UIImage(systemName: "gearshape.circle.fill"),
                                              style: .plain,
                                              target: self,
                                              action: #selector(moveToSettings))
         self.navigationItem.rightBarButtonItem = settingsButton
-        
         let rulesButton = UIBarButtonItem(image: UIImage(systemName: "list.bullet.rectangle.portrait.fill"),
                                           style: .plain, target: self,
                                           action: #selector(moveToRules))

@@ -15,11 +15,11 @@ extension UIScrollView {
         arrangedSubviews.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            arrangedSubviews.topAnchor.constraint(equalTo: topAnchor),
-            arrangedSubviews.bottomAnchor.constraint(equalTo: bottomAnchor),
-            arrangedSubviews.leadingAnchor.constraint(equalTo: leadingAnchor),
-            arrangedSubviews.trailingAnchor.constraint(equalTo: trailingAnchor),
-            arrangedSubviews.widthAnchor.constraint(equalTo: widthAnchor)
+            arrangedSubviews.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            arrangedSubviews.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
+            arrangedSubviews.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            arrangedSubviews.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            arrangedSubviews.widthAnchor.constraint(equalTo: widthAnchor, constant: -20)
         ])
         
     }
