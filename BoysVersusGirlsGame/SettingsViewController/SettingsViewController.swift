@@ -13,7 +13,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = SettingViewModel()
-        view.backgroundColor = .blue
+        view.backgroundColor = .mainColor()
     }
 }
 

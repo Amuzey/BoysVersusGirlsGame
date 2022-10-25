@@ -12,16 +12,13 @@ class RulesViewController: UIViewController {
     private var viewModel: RulesViewModelProtocol?
     
     let showDevelopersButton = UIButton(title: "Разработчики",
-                                        titleColor: .white,
-                                        backgroundColor: .buttonColor())
+                                        titleColor: .white)
     
     let rateTheAppButton = UIButton(title: "Оценить",
-                                    titleColor: .white,
-                                    backgroundColor: .buttonColor())
+                                    titleColor: .white)
     
     let scrollView = UIScrollView(arrangedSubviews: UILabel(
-        text: DataStorage.shared.rules,
-        font: .avenir20(), numberOfLines: 0,
+        text: DataStorage.shared.rules, numberOfLines: 0,
         tintColor: .white)
     )
     
@@ -30,7 +27,6 @@ class RulesViewController: UIViewController {
         viewModel = RulesViewModel()
         setupConstraints()
         view.backgroundColor = .mainColor()
-        
         scrollView.backgroundColor = .buttonColor()
         scrollView.layer.cornerRadius = 15
     }

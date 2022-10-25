@@ -8,19 +8,17 @@
 import UIKit
 
 class StartViewController: UIViewController {
-    let logoImageView = UIImageView(image: UIImage(systemName: "trash.square.fill"))
+    let logoImageView = UIImageView(image: UIImage(named: "Logo"))
     let startButton = UIButton(title: "Начать",
                                titleColor: .white,
-                               backgroundColor: .blue,
-                               font: .systemFont(ofSize: 30),
-                               isShadow: true)
-    
+                               font: .systemFont(ofSize: 30))
+                              
     private var viewModel: StartViewModelProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = StartViewModel()
-        view.backgroundColor = .systemPink
+        view.backgroundColor = .mainColor()
         setupNavigationBar()
         setupConstraints()
     }
@@ -54,10 +52,11 @@ extension StartViewController {
         setupSubviews(logoImageView, startButton)
         
         NSLayoutConstraint.activate([
-            logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            logoImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.3),
-            logoImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5)
+            logoImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            logoImageView.heightAnchor.constraint(equalTo: logoImageView.widthAnchor),
+            logoImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5),
+            logoImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8)
         ])
         
         NSLayoutConstraint.activate([

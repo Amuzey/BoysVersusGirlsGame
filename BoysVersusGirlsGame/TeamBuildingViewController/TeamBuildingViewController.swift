@@ -9,12 +9,19 @@ import UIKit
 
 class TeamBuildingViewController: UIViewController {
     
-    let headerLabel = UILabel(text: "Введите название Женской команды:", font: .avenir35(), numberOfLines: 0, tintColor: .black)
+    let headerLabel = UILabel(text: "Введите название Женской команды:",
+                              font: .avenir35(),
+                              numberOfLines: 0,
+                              tintColor: .white)
     let teamNameTextField = OneLineTextField(font: .avenir20())
-    let continuedButton = UIButton(title: "Продолжить", titleColor: .white, backgroundColor: .red)
+    let continuedButton = UIButton(title: "Продолжить",
+                                   titleColor: .white,
+                                   backgroundColor: .lightPinkColor(),
+                                   cornerRadius: 25)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .mainColor()
         setupConstraints()
     }
     /*
@@ -47,9 +54,10 @@ extension TeamBuildingViewController {
         ])
         
         NSLayoutConstraint.activate([
-            continuedButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            continuedButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
-            continuedButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40)
+            continuedButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70),
+            continuedButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -70),
+            continuedButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80),
+            continuedButton.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
     
