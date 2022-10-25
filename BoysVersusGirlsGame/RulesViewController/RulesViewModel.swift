@@ -20,4 +20,6 @@ class RulesViewModel: RulesViewModelProtocol {
     func rateTheApp() {
         
     }
+    
+    
 }

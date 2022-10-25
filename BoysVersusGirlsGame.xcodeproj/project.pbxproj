@@ -25,6 +25,7 @@
 		8A76A35729046923001D38BD /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A35629046923001D38BD /* ResultViewController.swift */; };
 		8A76A35929046931001D38BD /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A35829046931001D38BD /* ResultViewModel.swift */; };
 		8A76A35B29046BB1001D38BD /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A35A29046BB1001D38BD /* ResultView.swift */; };
+		8A80B1EF29084EF500E3CE40 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A80B1EE29084EF500E3CE40 /* UIColor + Extension.swift */; };
 		8AB4E2CA29003D0200195D17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2C929003D0200195D17 /* AppDelegate.swift */; };
 		8AB4E2CC29003D0200195D17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2CB29003D0200195D17 /* SceneDelegate.swift */; };
 		8AB4E2CE29003D0200195D17 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2CD29003D0200195D17 /* StartViewController.swift */; };
@@ -53,6 +54,7 @@
 		8A76A35629046923001D38BD /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		8A76A35829046931001D38BD /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		8A76A35A29046BB1001D38BD /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		8A80B1EE29084EF500E3CE40 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		8AB4E2C629003D0200195D17 /* BoysVersusGirlsGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoysVersusGirlsGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB4E2C929003D0200195D17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AB4E2CB29003D0200195D17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				8A3124552901698400BCCBB2 /* UILabel + Extension.swift */,
 				8A31245729016AA900BCCBB2 /* UIFont + Extension.swift */,
 				8A31245929016C9200BCCBB2 /* UIStackView + Extension.swift */,
+				8A80B1EE29084EF500E3CE40 /* UIColor + Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				8AB4E2E029003F6800195D17 /* RulesViewController.swift in Sources */,
 				8A76A35B29046BB1001D38BD /* ResultView.swift in Sources */,
 				8A76A35729046923001D38BD /* ResultViewController.swift in Sources */,
+				8A80B1EF29084EF500E3CE40 /* UIColor + Extension.swift in Sources */,
 				8A76A35929046931001D38BD /* ResultViewModel.swift in Sources */,
 				8A31246B2902D49C00BCCBB2 /* DevelopersViewModel.swift in Sources */,
 				8A31245A29016C9200BCCBB2 /* UIStackView + Extension.swift in Sources */,
