@@ -28,11 +28,11 @@ class StartViewController: UIViewController {
                                              style: .plain,
                                              target: self,
                                              action: #selector(moveToSettings))
-        self.navigationItem.rightBarButtonItem = settingsButton
+        navigationItem.rightBarButtonItem = settingsButton
         let rulesButton = UIBarButtonItem(image: UIImage(systemName: "list.bullet.rectangle.portrait.fill"),
                                           style: .plain, target: self,
                                           action: #selector(moveToRules))
-        self.navigationItem.leftBarButtonItem = rulesButton
+        navigationItem.leftBarButtonItem = rulesButton
     }
     
     @objc private func moveToSettings() {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		890441B0290971F9007F670E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890441AF290971F9007F670E /* SettingsView.swift */; };
+		890441B229097391007F670E /* UISlider + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890441B129097391007F670E /* UISlider + Extension.swift */; };
 		8949F4AF2900412400A77EDB /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949F4AE2900412400A77EDB /* StartViewModel.swift */; };
 		8949F4B22900414B00A77EDB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949F4B12900414B00A77EDB /* SettingsViewModel.swift */; };
 		8949F4B52900415C00A77EDB /* RulesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949F4B42900415C00A77EDB /* RulesViewModel.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		890441AF290971F9007F670E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		890441B129097391007F670E /* UISlider + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISlider + Extension.swift"; sourceTree = "<group>"; };
 		8949F4AE2900412400A77EDB /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
 		8949F4B12900414B00A77EDB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		8949F4B42900415C00A77EDB /* RulesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewModel.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 		8A31245129015B6100BCCBB2 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				890441AF290971F9007F670E /* SettingsView.swift */,
 				8A80B1F029091F7A00E3CE40 /* CustomTextField.swift */,
 				8A80B1F22909226600E3CE40 /* CustomLabel.swift */,
 				8A31246E2902DD4900BCCBB2 /* DeveloperView.swift */,
@@ -155,6 +160,7 @@
 		8A31245429015D0E00BCCBB2 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				890441B129097391007F670E /* UISlider + Extension.swift */,
 				8A31245229015D0100BCCBB2 /* UIButton + Extension.swift */,
 				8A31245B2901775E00BCCBB2 /* UIScrollView + Extension.swift */,
 				8A3124552901698400BCCBB2 /* UILabel + Extension.swift */,
@@ -296,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				890441B0290971F9007F670E /* SettingsView.swift in Sources */,
 				8A31245829016AA900BCCBB2 /* UIFont + Extension.swift in Sources */,
 				8A80B1F32909226600E3CE40 /* CustomLabel.swift in Sources */,
 				8AB4E2E029003F6800195D17 /* RulesViewController.swift in Sources */,
@@ -319,6 +326,7 @@
 				8A3124682902D45E00BCCBB2 /* DevelopersViewController.swift in Sources */,
 				8949F4B52900415C00A77EDB /* RulesViewModel.swift in Sources */,
 				8949F4B22900414B00A77EDB /* SettingsViewModel.swift in Sources */,
+				890441B229097391007F670E /* UISlider + Extension.swift in Sources */,
 				8A3124612902B49900BCCBB2 /* TeamBuildingViewController.swift in Sources */,
 				8A31245C2901775F00BCCBB2 /* UIScrollView + Extension.swift in Sources */,
 			);
