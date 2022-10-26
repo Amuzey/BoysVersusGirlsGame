@@ -29,25 +29,24 @@ class CustomTextField: UIView  {
         textField.placeholder = "Введите название"
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
         textField.translatesAutoresizingMaskIntoConstraints = false
-        imageView.layer.cornerRadius = 20
-        imageView.clipsToBounds = true
-        self.addSubview(imageView)
-        self.addSubview(textField)
+        textField.attributedPlaceholder = NSAttributedString(string: "Введите название команды", attributes: [NSAttributedString.Key.foregroundColor: UIColor.yellow])
+        addSubview(imageView)
+        addSubview(textField)
         
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
-            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 1)
-           
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            imageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
+            imageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.2)
         ])
         
         NSLayoutConstraint.activate([
             textField.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 20),
-            textField.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            textField.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
-            textField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20)
+            textField.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            textField.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
+            textField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
         ])
     }
 }

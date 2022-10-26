@@ -25,13 +25,13 @@ class CustomLabel: UIView  {
         }
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(label)
+        addSubview(label)
         
         NSLayoutConstraint.activate([
-            label.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            label.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            label.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
-            label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10)
+            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            label.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
+            label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ])
     }
 }
