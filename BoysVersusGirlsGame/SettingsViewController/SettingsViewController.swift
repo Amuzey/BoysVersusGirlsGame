@@ -43,8 +43,8 @@ extension SettingsViewController {
         NSLayoutConstraint.activate([
             settingsStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
             settingsStackView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.4),
-            settingsStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            settingsStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+            settingsStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            settingsStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
         ])
     }
     

@@ -36,8 +36,8 @@ extension TeamBuildingViewController {
         ])
         
         NSLayoutConstraint.activate([
-            teamNameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            teamNameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            teamNameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+            teamNameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
             teamNameTextField.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             teamNameTextField.heightAnchor.constraint(equalToConstant: 75)
         ])
