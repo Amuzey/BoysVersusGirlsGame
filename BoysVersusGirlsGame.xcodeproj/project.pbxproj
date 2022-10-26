@@ -13,6 +13,12 @@
 		8949F4B22900414B00A77EDB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949F4B12900414B00A77EDB /* SettingsViewModel.swift */; };
 		8949F4B52900415C00A77EDB /* RulesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949F4B42900415C00A77EDB /* RulesViewModel.swift */; };
 		89C60465290162FE0071A198 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C60464290162FE0071A198 /* DataStorage.swift */; };
+		8A1E92E12909F16400B8A58D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E92E02909F16400B8A58D /* GameViewController.swift */; };
+		8A1E92E32909F17200B8A58D /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E92E22909F17200B8A58D /* GameViewModel.swift */; };
+		8A1E92E82909F1D900B8A58D /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E92E72909F1D900B8A58D /* AnswerViewController.swift */; };
+		8A1E92EC2909F29000B8A58D /* StartRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E92EB2909F29000B8A58D /* StartRoundViewController.swift */; };
+		8A1E92EE2909F29F00B8A58D /* StartRoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E92ED2909F29F00B8A58D /* StartRoundViewModel.swift */; };
+		8A1E92F02909F2AF00B8A58D /* AnswerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E92EF2909F2AF00B8A58D /* AnswerViewModel.swift */; };
 		8A31245329015D0100BCCBB2 /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A31245229015D0100BCCBB2 /* UIButton + Extension.swift */; };
 		8A3124562901698400BCCBB2 /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3124552901698400BCCBB2 /* UILabel + Extension.swift */; };
 		8A31245829016AA900BCCBB2 /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A31245729016AA900BCCBB2 /* UIFont + Extension.swift */; };
@@ -45,6 +51,12 @@
 		8949F4B12900414B00A77EDB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		8949F4B42900415C00A77EDB /* RulesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewModel.swift; sourceTree = "<group>"; };
 		89C60464290162FE0071A198 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
+		8A1E92E02909F16400B8A58D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		8A1E92E22909F17200B8A58D /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		8A1E92E72909F1D900B8A58D /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		8A1E92EB2909F29000B8A58D /* StartRoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRoundViewController.swift; sourceTree = "<group>"; };
+		8A1E92ED2909F29F00B8A58D /* StartRoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRoundViewModel.swift; sourceTree = "<group>"; };
+		8A1E92EF2909F2AF00B8A58D /* AnswerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewModel.swift; sourceTree = "<group>"; };
 		8A31245229015D0100BCCBB2 /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
 		8A3124552901698400BCCBB2 /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
 		8A31245729016AA900BCCBB2 /* UIFont + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
@@ -144,6 +156,33 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		8A1E92DF2909F11200B8A58D /* GameViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8A1E92E02909F16400B8A58D /* GameViewController.swift */,
+				8A1E92E22909F17200B8A58D /* GameViewModel.swift */,
+			);
+			path = GameViewController;
+			sourceTree = "<group>";
+		};
+		8A1E92E62909F19F00B8A58D /* StartRoundViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8A1E92EB2909F29000B8A58D /* StartRoundViewController.swift */,
+				8A1E92ED2909F29F00B8A58D /* StartRoundViewModel.swift */,
+			);
+			path = StartRoundViewController;
+			sourceTree = "<group>";
+		};
+		8A1E92E92909F1E400B8A58D /* AnswerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8A1E92E72909F1D900B8A58D /* AnswerViewController.swift */,
+				8A1E92EF2909F2AF00B8A58D /* AnswerViewModel.swift */,
+			);
+			path = AnswerViewController;
+			sourceTree = "<group>";
+		};
 		8A31245129015B6100BCCBB2 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,7 +262,10 @@
 				8949F4B32900414F00A77EDB /* RulesViewController */,
 				8A3124692902D47900BCCBB2 /* DevelopersViewController */,
 				8A3124622902B49F00BCCBB2 /* TeamBuildingViewController */,
+				8A1E92E62909F19F00B8A58D /* StartRoundViewController */,
+				8A1E92DF2909F11200B8A58D /* GameViewController */,
 				8A76A355290468FC001D38BD /* ResultViewController */,
+				8A1E92E92909F1E400B8A58D /* AnswerViewController */,
 				8949F4AC2900410D00A77EDB /* Resources */,
 				8949F4AB2900410500A77EDB /* Storyboard */,
 				89C604662901646A0071A198 /* Services */,
@@ -302,12 +344,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A1E92F02909F2AF00B8A58D /* AnswerViewModel.swift in Sources */,
+				8A1E92E12909F16400B8A58D /* GameViewController.swift in Sources */,
 				890441B0290971F9007F670E /* SettingsView.swift in Sources */,
 				8A31245829016AA900BCCBB2 /* UIFont + Extension.swift in Sources */,
+				8A1E92E32909F17200B8A58D /* GameViewModel.swift in Sources */,
 				8A80B1F32909226600E3CE40 /* CustomLabel.swift in Sources */,
 				8AB4E2E029003F6800195D17 /* RulesViewController.swift in Sources */,
 				8A76A35B29046BB1001D38BD /* ResultView.swift in Sources */,
 				8A76A35729046923001D38BD /* ResultViewController.swift in Sources */,
+				8A1E92E82909F1D900B8A58D /* AnswerViewController.swift in Sources */,
 				8A80B1EF29084EF500E3CE40 /* UIColor + Extension.swift in Sources */,
 				8A76A35929046931001D38BD /* ResultViewModel.swift in Sources */,
 				8A31246B2902D49C00BCCBB2 /* DevelopersViewModel.swift in Sources */,
@@ -321,6 +367,7 @@
 				8A3124642902B4BD00BCCBB2 /* TeamBuildingViewModel.swift in Sources */,
 				8A31245329015D0100BCCBB2 /* UIButton + Extension.swift in Sources */,
 				8A3124562901698400BCCBB2 /* UILabel + Extension.swift in Sources */,
+				8A1E92EE2909F29F00B8A58D /* StartRoundViewModel.swift in Sources */,
 				8AB4E2DE29003F5E00195D17 /* SettingsViewController.swift in Sources */,
 				89C60465290162FE0071A198 /* DataStorage.swift in Sources */,
 				8A3124682902D45E00BCCBB2 /* DevelopersViewController.swift in Sources */,
@@ -328,6 +375,7 @@
 				8949F4B22900414B00A77EDB /* SettingsViewModel.swift in Sources */,
 				890441B229097391007F670E /* UISlider + Extension.swift in Sources */,
 				8A3124612902B49900BCCBB2 /* TeamBuildingViewController.swift in Sources */,
+				8A1E92EC2909F29000B8A58D /* StartRoundViewController.swift in Sources */,
 				8A31245C2901775F00BCCBB2 /* UIScrollView + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

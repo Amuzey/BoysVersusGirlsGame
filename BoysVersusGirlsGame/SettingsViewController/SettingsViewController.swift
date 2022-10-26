@@ -8,8 +8,8 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-    private var viewModel: SettingViewModelProtocol?
     
+    private var viewModel: SettingViewModelProtocol?
     private let numberOfQuestionsView = SettingsView(
         textLabel: UILabel(text: "Количество вопросов:", numberOfLines: 1, tintColor: .white),
         valueLabel: UILabel(text: "12", numberOfLines: 1, tintColor: .white),

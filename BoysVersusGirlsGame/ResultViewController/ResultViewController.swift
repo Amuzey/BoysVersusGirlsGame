@@ -9,13 +9,13 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
-    let cupImageView = UIImageView(image: UIImage(named: "CupPicture"))
-    let resultLabel = CustomLabel(label: UILabel(text: "Победила команда: Дереволазы",
-                                                 numberOfLines: 0,
-                                                 tintColor: .white),
-                                  cornerRadius: 20)
+    private let cupImageView = UIImageView(image: UIImage(named: "CupPicture"))
+    private let resultLabel = CustomLabel(label: UILabel(text: "Победила команда: Дереволазы",
+                                                         numberOfLines: 0,
+                                                         tintColor: .white),
+                                          cornerRadius: 20)
     
-    let resultBoysView = CustomLabel(
+    private let resultBoysView = CustomLabel(
         label: UILabel(text: "7", tintColor: .white),
         imageView: UIImageView(image: UIImage(named: "Star")),
         backgroundColor: .lightBlueColor(),
@@ -23,15 +23,15 @@ class ResultViewController: UIViewController {
         isShadow: true
     )
     
-    let resultGirlsView = CustomLabel(
+    private let resultGirlsView = CustomLabel(
         label: UILabel(text: "3", tintColor: .white),
         imageView: UIImageView(image: UIImage(named: "Star")),
         backgroundColor: .lightPinkColor(),
         cornerRadius: 20,
         isShadow: true)
     
-    let answerButton = UIButton(title: "Ответы", titleColor: .white)
-    let repeatButton = UIButton(title: "Меню", titleColor: .white)
+    private let answerButton = UIButton(title: "Ответы", titleColor: .white)
+    private let repeatButton = UIButton(title: "Меню", titleColor: .white)
     
     override func viewDidLoad() {
         super.viewDidLoad()
