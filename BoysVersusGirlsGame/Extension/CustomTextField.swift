@@ -27,11 +27,12 @@ class CustomTextField: UIView  {
         let textField = UITextField()
         textField.borderStyle = .none
         textField.placeholder = "Введите название"
+        textField.textColor = .white
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.attributedPlaceholder = NSAttributedString(string: "Введите название команды", attributes: [NSAttributedString.Key.foregroundColor: UIColor.yellow])
+        textField.attributedPlaceholder = NSAttributedString(string: "Введите название команды", attributes: [NSAttributedString.Key.foregroundColor: UIColor.placeholderColor()])
         addSubview(imageView)
         addSubview(textField)
         
@@ -43,7 +44,7 @@ class CustomTextField: UIView  {
         ])
         
         NSLayoutConstraint.activate([
-            textField.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 20),
+            textField.leadingAnchor.constraint(equalTo: imageView.trailingAnchor),
             textField.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             textField.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
             textField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)

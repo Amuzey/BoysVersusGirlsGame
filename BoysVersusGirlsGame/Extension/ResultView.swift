@@ -14,7 +14,7 @@ class ResultView: UIView {
         
         self.backgroundColor = .blue
         self.layer.cornerRadius = 20
-        
+       
         let boysLabel = UILabel(text: boysResult, font: .avenir35(), numberOfLines: 1, tintColor: .white)
         let girlsLabel = UILabel(text: girlsResult, font: .avenir35(), numberOfLines: 1, tintColor: .white)
         

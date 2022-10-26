@@ -30,7 +30,6 @@ class DevelopersViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .mainColor()
         setupConstraints()
-        
     }
 }
 
@@ -40,7 +39,6 @@ extension DevelopersViewController {
     private func setupConstraints() {
         
         let developerStackView = UIStackView(arrangedSubviews: [alexeyView, antonView], axis: .vertical, spacing: 20, distribution: .fillEqually)
-       
         
         setupSubviews(developerStackView)
         

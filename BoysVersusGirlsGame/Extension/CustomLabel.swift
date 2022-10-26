@@ -9,6 +9,7 @@ import UIKit
 
 class CustomLabel: UIView  {
     convenience init(label: UILabel,
+                     imageView: UIImageView? = nil,
                      backgroundColor: UIColor = .buttonColor(),
                      cornerRadius: CGFloat,
                      isShadow: Bool = true) {
@@ -27,11 +28,32 @@ class CustomLabel: UIView  {
         label.translatesAutoresizingMaskIntoConstraints = false
         addSubview(label)
         
-        NSLayoutConstraint.activate([
-            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            label.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
-            label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
-        ])
+        
+        if let imageView = imageView {
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            imageView.contentMode = .scaleAspectFit
+            addSubview(imageView)
+            
+            NSLayoutConstraint.activate([
+                label.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 10),
+                label.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+                label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
+                label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            ])
+            
+            NSLayoutConstraint.activate([
+                imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+                imageView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+                imageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
+                imageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.2)
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+                label.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+                label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
+                label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            ])
+        }
     }
 }

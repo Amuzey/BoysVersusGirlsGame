@@ -19,6 +19,7 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
         viewModel = StartViewModel()
         view.backgroundColor = .mainColor()
+        logoImageView.contentMode = .scaleAspectFit
         setupNavigationBar()
         setupConstraints()
     }
@@ -54,9 +55,8 @@ extension StartViewController {
         NSLayoutConstraint.activate([
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            logoImageView.heightAnchor.constraint(equalTo: logoImageView.widthAnchor),
-            logoImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5),
-            logoImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8)
+            logoImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.4)
+           
         ])
         
         NSLayoutConstraint.activate([

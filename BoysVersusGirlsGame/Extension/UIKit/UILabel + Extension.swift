@@ -10,7 +10,7 @@ import UIKit
 extension UILabel {
     convenience init(text: String,
                      font: UIFont? = .avenir20(),
-                     numberOfLines: Int,
+                     numberOfLines: Int = 0,
                      tintColor: UIColor) {
         self.init()
         
