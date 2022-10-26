@@ -9,7 +9,7 @@ import UIKit
 
 class DevelopersViewController: UIViewController {
     
-    let alexeyView = DeveloperView(
+    private let alexeyView = DeveloperView(
         imageView: UIImageView(image: UIImage(named: "Alexey")),
         text: UILabel(text: "iOSDeveloper, Alexey Ivanov",
                       font: .avenir20(),
@@ -18,7 +18,7 @@ class DevelopersViewController: UIViewController {
         cornerRadius: 20
     )
     
-    let antonView = DeveloperView(
+    private let antonView = DeveloperView(
         imageView: UIImageView(image: UIImage(named: "Anton")),
         text: UILabel(text: "iOS Developer, Anton Mazur",
                       font: .avenir20(), numberOfLines: 0,

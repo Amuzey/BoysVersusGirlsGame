@@ -11,13 +11,13 @@ class RulesViewController: UIViewController {
     
     private var viewModel: RulesViewModelProtocol?
     
-    let showDevelopersButton = UIButton(title: "Разработчики",
-                                        titleColor: .white)
+    private let showDevelopersButton = UIButton(title: "Разработчики",
+                                                titleColor: .white)
     
-    let rateTheAppButton = UIButton(title: "Оценить",
-                                    titleColor: .white)
+    private let rateTheAppButton = UIButton(title: "Оценить",
+                                            titleColor: .white)
     
-    let scrollView = UIScrollView(arrangedSubviews: UILabel(
+    private let scrollView = UIScrollView(arrangedSubviews: UILabel(
         text: DataStorage.shared.rules, numberOfLines: 0,
         tintColor: .white)
     )

@@ -9,12 +9,20 @@ import UIKit
 
 class TeamBuildingViewController: UIViewController {
     
-    let headerLabel = CustomLabel(label: UILabel(text: "Введите название женской команды:", numberOfLines: 2, tintColor: .white), cornerRadius: 20)
-    let teamNameTextField = CustomTextField(imageView: UIImageView(image: UIImage(named: "GirlsLogo")), cornerRadius: 20)
-    let continuedButton = UIButton(title: "Продолжить",
-                                   titleColor: .white,
-                                   backgroundColor: .lightPinkColor(),
-                                   cornerRadius: 25)
+    private let headerLabel = CustomLabel(
+        label: UILabel(text: "Введите название женской команды:",
+                       numberOfLines: 2,
+                       tintColor: .white),
+        cornerRadius: 20)
+    
+    private let teamNameTextField = CustomTextField(
+        imageView: UIImageView(image: UIImage(named: "GirlsLogo")),
+        cornerRadius: 20)
+    
+    private let continuedButton = UIButton(title: "Продолжить",
+                                           titleColor: .white,
+                                           backgroundColor: .lightPinkColor(),
+                                           cornerRadius: 25)
     
     override func viewDidLoad() {
         super.viewDidLoad()

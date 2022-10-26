@@ -8,11 +8,12 @@
 import UIKit
 
 class StartViewController: UIViewController {
-    let logoImageView = UIImageView(image: UIImage(named: "Logo"))
-    let startButton = UIButton(title: "Начать",
-                               titleColor: .white,
-                               font: .systemFont(ofSize: 30))
-                              
+    
+    private let logoImageView = UIImageView(image: UIImage(named: "Logo"))
+    private let startButton = UIButton(title: "Начать",
+                                       titleColor: .white,
+                                       font: .systemFont(ofSize: 30))
+    
     private var viewModel: StartViewModelProtocol?
     
     override func viewDidLoad() {
@@ -23,7 +24,7 @@ class StartViewController: UIViewController {
         setupNavigationBar()
         setupConstraints()
     }
-
+    
     private func setupNavigationBar() {
         let settingsButton = UIBarButtonItem(image: UIImage(systemName: "gearshape.circle.fill"),
                                              style: .plain,
@@ -56,7 +57,7 @@ extension StartViewController {
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             logoImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.4)
-           
+            
         ])
         
         NSLayoutConstraint.activate([
