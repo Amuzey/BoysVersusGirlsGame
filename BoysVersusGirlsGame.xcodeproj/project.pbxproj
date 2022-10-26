@@ -18,7 +18,6 @@
 		8A31245C2901775F00BCCBB2 /* UIScrollView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A31245B2901775E00BCCBB2 /* UIScrollView + Extension.swift */; };
 		8A3124612902B49900BCCBB2 /* TeamBuildingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3124602902B49900BCCBB2 /* TeamBuildingViewController.swift */; };
 		8A3124642902B4BD00BCCBB2 /* TeamBuildingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3124632902B4BD00BCCBB2 /* TeamBuildingViewModel.swift */; };
-		8A3124662902B53A00BCCBB2 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3124652902B53A00BCCBB2 /* OneLineTextField.swift */; };
 		8A3124682902D45E00BCCBB2 /* DevelopersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3124672902D45E00BCCBB2 /* DevelopersViewController.swift */; };
 		8A31246B2902D49C00BCCBB2 /* DevelopersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A31246A2902D49C00BCCBB2 /* DevelopersViewModel.swift */; };
 		8A31246F2902DD4900BCCBB2 /* DeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A31246E2902DD4900BCCBB2 /* DeveloperView.swift */; };
@@ -26,6 +25,8 @@
 		8A76A35929046931001D38BD /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A35829046931001D38BD /* ResultViewModel.swift */; };
 		8A76A35B29046BB1001D38BD /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A35A29046BB1001D38BD /* ResultView.swift */; };
 		8A80B1EF29084EF500E3CE40 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A80B1EE29084EF500E3CE40 /* UIColor + Extension.swift */; };
+		8A80B1F129091F7A00E3CE40 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A80B1F029091F7A00E3CE40 /* CustomTextField.swift */; };
+		8A80B1F32909226600E3CE40 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A80B1F22909226600E3CE40 /* CustomLabel.swift */; };
 		8AB4E2CA29003D0200195D17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2C929003D0200195D17 /* AppDelegate.swift */; };
 		8AB4E2CC29003D0200195D17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2CB29003D0200195D17 /* SceneDelegate.swift */; };
 		8AB4E2CE29003D0200195D17 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2CD29003D0200195D17 /* StartViewController.swift */; };
@@ -47,7 +48,6 @@
 		8A31245B2901775E00BCCBB2 /* UIScrollView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView + Extension.swift"; sourceTree = "<group>"; };
 		8A3124602902B49900BCCBB2 /* TeamBuildingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamBuildingViewController.swift; sourceTree = "<group>"; };
 		8A3124632902B4BD00BCCBB2 /* TeamBuildingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamBuildingViewModel.swift; sourceTree = "<group>"; };
-		8A3124652902B53A00BCCBB2 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 		8A3124672902D45E00BCCBB2 /* DevelopersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersViewController.swift; sourceTree = "<group>"; };
 		8A31246A2902D49C00BCCBB2 /* DevelopersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersViewModel.swift; sourceTree = "<group>"; };
 		8A31246E2902DD4900BCCBB2 /* DeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperView.swift; sourceTree = "<group>"; };
@@ -55,6 +55,8 @@
 		8A76A35829046931001D38BD /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		8A76A35A29046BB1001D38BD /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		8A80B1EE29084EF500E3CE40 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
+		8A80B1F029091F7A00E3CE40 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		8A80B1F22909226600E3CE40 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		8AB4E2C629003D0200195D17 /* BoysVersusGirlsGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoysVersusGirlsGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB4E2C929003D0200195D17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AB4E2CB29003D0200195D17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,7 +143,8 @@
 		8A31245129015B6100BCCBB2 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				8A3124652902B53A00BCCBB2 /* OneLineTextField.swift */,
+				8A80B1F029091F7A00E3CE40 /* CustomTextField.swift */,
+				8A80B1F22909226600E3CE40 /* CustomLabel.swift */,
 				8A31246E2902DD4900BCCBB2 /* DeveloperView.swift */,
 				8A76A35A29046BB1001D38BD /* ResultView.swift */,
 				8A31245429015D0E00BCCBB2 /* UIKit */,
@@ -294,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A31245829016AA900BCCBB2 /* UIFont + Extension.swift in Sources */,
+				8A80B1F32909226600E3CE40 /* CustomLabel.swift in Sources */,
 				8AB4E2E029003F6800195D17 /* RulesViewController.swift in Sources */,
 				8A76A35B29046BB1001D38BD /* ResultView.swift in Sources */,
 				8A76A35729046923001D38BD /* ResultViewController.swift in Sources */,
@@ -302,11 +306,11 @@
 				8A31246B2902D49C00BCCBB2 /* DevelopersViewModel.swift in Sources */,
 				8A31245A29016C9200BCCBB2 /* UIStackView + Extension.swift in Sources */,
 				8949F4AF2900412400A77EDB /* StartViewModel.swift in Sources */,
+				8A80B1F129091F7A00E3CE40 /* CustomTextField.swift in Sources */,
 				8AB4E2CE29003D0200195D17 /* StartViewController.swift in Sources */,
 				8AB4E2CA29003D0200195D17 /* AppDelegate.swift in Sources */,
 				8A31246F2902DD4900BCCBB2 /* DeveloperView.swift in Sources */,
 				8AB4E2CC29003D0200195D17 /* SceneDelegate.swift in Sources */,
-				8A3124662902B53A00BCCBB2 /* OneLineTextField.swift in Sources */,
 				8A3124642902B4BD00BCCBB2 /* TeamBuildingViewModel.swift in Sources */,
 				8A31245329015D0100BCCBB2 /* UIButton + Extension.swift in Sources */,
 				8A3124562901698400BCCBB2 /* UILabel + Extension.swift in Sources */,

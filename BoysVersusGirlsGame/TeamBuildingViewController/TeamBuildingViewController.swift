@@ -9,11 +9,8 @@ import UIKit
 
 class TeamBuildingViewController: UIViewController {
     
-    let headerLabel = UILabel(text: "Введите название Женской команды:",
-                              font: .avenir35(),
-                              numberOfLines: 0,
-                              tintColor: .white)
-    let teamNameTextField = OneLineTextField(font: .avenir20())
+    let headerLabel = CustomLabel(label: UILabel(text: "Введите название женской команды:", numberOfLines: 2, tintColor: .white), cornerRadius: 20)
+    let teamNameTextField = CustomTextField(imageView: UIImageView(image: UIImage(named: "GirlsLogo")), cornerRadius: 20)
     let continuedButton = UIButton(title: "Продолжить",
                                    titleColor: .white,
                                    backgroundColor: .lightPinkColor(),
@@ -50,14 +47,15 @@ extension TeamBuildingViewController {
         NSLayoutConstraint.activate([
             teamNameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             teamNameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            teamNameTextField.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            teamNameTextField.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            teamNameTextField.heightAnchor.constraint(equalToConstant: 75)
         ])
         
         NSLayoutConstraint.activate([
             continuedButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70),
             continuedButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -70),
             continuedButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80),
-            continuedButton.heightAnchor.constraint(equalToConstant: 60)
+            continuedButton.heightAnchor.constraint(equalToConstant: 75)
         ])
     }
     
