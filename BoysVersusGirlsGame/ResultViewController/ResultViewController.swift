@@ -10,13 +10,18 @@ import UIKit
 class ResultViewController: UIViewController {
     
     let cupImageView = UIImageView(image: UIImage(named: "cup"))
-    let resultLabel = UILabel(text: "Победила команда: Дереволазы ", font: .avenir20(), numberOfLines: 2, tintColor: .gray)
+    let resultLabel = CustomLabel(label: UILabel(text: "Победила команда Дереволазы",
+                                                 numberOfLines: 0,
+                                                 tintColor: .white),
+                                  cornerRadius: 20)
+    
     let resultView = ResultView(boysResult: "4", girlsResult: "7")
-    let answerButton = UIButton(title: "Ответы", titleColor: .white, backgroundColor: .red)
-    let repeatButton = UIButton(title: "Начать заново", titleColor: .white, backgroundColor: .red)
+    let answerButton = UIButton(title: "Ответы", titleColor: .white)
+    let repeatButton = UIButton(title: "Меню", titleColor: .white)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .mainColor()
         setupConstraints()
     }
     /*
