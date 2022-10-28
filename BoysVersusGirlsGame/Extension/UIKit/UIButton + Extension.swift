@@ -19,19 +19,19 @@ extension UIButton {
                      cornerRadius: CGFloat = 15) {
         self.init(type: .system)
         
-        self.setTitle(title, for: .normal)
-        self.setTitleColor(titleColor, for: .normal)
+        setTitle(title, for: .normal)
+        setTitleColor(titleColor, for: .normal)
         self.backgroundColor = backgroundColor
-        self.titleLabel?.font = font
-        self.layer.cornerRadius = cornerRadius
-        self.layer.borderWidth = borderWidth
-        self.layer.borderColor = borderColor
+        titleLabel?.font = font
+        layer.cornerRadius = cornerRadius
+        layer.borderWidth = borderWidth
+        layer.borderColor = borderColor
         
         if isShadow {
-            self.layer.shadowColor = UIColor.black.cgColor
-            self.layer.shadowRadius = 4
-            self.layer.shadowOpacity = 0.8
-            self.layer.shadowOffset = CGSize(width: 0, height: 5)
+            layer.shadowColor = UIColor.black.cgColor
+            layer.shadowRadius = 4
+            layer.shadowOpacity = 0.8
+            layer.shadowOffset = CGSize(width: 0, height: 5)
         }
     }
 }

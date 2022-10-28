@@ -35,6 +35,7 @@
 		8A80B1EF29084EF500E3CE40 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A80B1EE29084EF500E3CE40 /* UIColor + Extension.swift */; };
 		8A80B1F129091F7A00E3CE40 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A80B1F029091F7A00E3CE40 /* CustomTextField.swift */; };
 		8A80B1F32909226600E3CE40 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A80B1F22909226600E3CE40 /* CustomLabel.swift */; };
+		8A84472B290C82D7006B8DA5 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A84472A290C82D7006B8DA5 /* QuestionView.swift */; };
 		8AB4E2CA29003D0200195D17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2C929003D0200195D17 /* AppDelegate.swift */; };
 		8AB4E2CC29003D0200195D17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2CB29003D0200195D17 /* SceneDelegate.swift */; };
 		8AB4E2CE29003D0200195D17 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2CD29003D0200195D17 /* StartViewController.swift */; };
@@ -73,6 +74,7 @@
 		8A80B1EE29084EF500E3CE40 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		8A80B1F029091F7A00E3CE40 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		8A80B1F22909226600E3CE40 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		8A84472A290C82D7006B8DA5 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		8AB4E2C629003D0200195D17 /* BoysVersusGirlsGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoysVersusGirlsGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB4E2C929003D0200195D17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AB4E2CB29003D0200195D17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				8A80B1F22909226600E3CE40 /* CustomLabel.swift */,
 				8A31246E2902DD4900BCCBB2 /* DeveloperView.swift */,
 				8A76A35A29046BB1001D38BD /* ResultView.swift */,
+				8A84472A290C82D7006B8DA5 /* QuestionView.swift */,
 				8A31245429015D0E00BCCBB2 /* UIKit */,
 			);
 			path = Extension;
@@ -370,6 +373,7 @@
 				8A1E92EE2909F29F00B8A58D /* StartRoundViewModel.swift in Sources */,
 				8AB4E2DE29003F5E00195D17 /* SettingsViewController.swift in Sources */,
 				89C60465290162FE0071A198 /* DataStorage.swift in Sources */,
+				8A84472B290C82D7006B8DA5 /* QuestionView.swift in Sources */,
 				8A3124682902D45E00BCCBB2 /* DevelopersViewController.swift in Sources */,
 				8949F4B52900415C00A77EDB /* RulesViewModel.swift in Sources */,
 				8949F4B22900414B00A77EDB /* SettingsViewModel.swift in Sources */,
