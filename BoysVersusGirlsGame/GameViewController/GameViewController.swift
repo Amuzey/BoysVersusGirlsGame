@@ -8,24 +8,41 @@
 import UIKit
 
 class GameViewController: UIViewController {
-
+    
+    private let questionView = QuestionView(
+        questionImage: UIImageView(image: UIImage(named: "fly")),
+        questionLabel: UILabel(text: "Для чего педали самолету?", tintColor: .white))
+    
+    private let firstAnswerButton = UIButton(title: "A. Управлять хвостом", titleColor: .white)
+    private let seconAnswerButton = UIButton(title: "B. Набирать скорость", titleColor: .white)
+    private let thirdAnswerButton = UIButton(title: "C. Заряжать аккумулятор", titleColor: .white)
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .mainColor()
+        setupConstraint()
     }
     
+    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension GameViewController {
+    func setupConstraint() {
+        let buttonStackView = UIStackView(arrangedSubviews: [firstAnswerButton, seconAnswerButton, thirdAnswerButton], axis: .vertical, spacing: 10, distribution: .fillEqually)
+        let stackView = UIStackView(arrangedSubviews: [questionView, buttonStackView], axis: .vertical, spacing: 70, distribution: .fill)
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(stackView)
+        
+        NSLayoutConstraint.activate([
+            questionView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5),
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+            stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40)
+        ])
     }
-    */
-
 }
 
 //MARK: - SwiftUI
