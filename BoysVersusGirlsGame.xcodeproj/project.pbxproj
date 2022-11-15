@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		890441B0290971F9007F670E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890441AF290971F9007F670E /* SettingsView.swift */; };
 		890441B229097391007F670E /* UISlider + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890441B129097391007F670E /* UISlider + Extension.swift */; };
+		892328EE2922A18000679630 /* UIControl + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892328ED2922A18000679630 /* UIControl + Extension.swift */; };
 		8949F4AF2900412400A77EDB /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949F4AE2900412400A77EDB /* StartViewModel.swift */; };
 		8949F4B22900414B00A77EDB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949F4B12900414B00A77EDB /* SettingsViewModel.swift */; };
 		8949F4B52900415C00A77EDB /* RulesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949F4B42900415C00A77EDB /* RulesViewModel.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		890441AF290971F9007F670E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		890441B129097391007F670E /* UISlider + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISlider + Extension.swift"; sourceTree = "<group>"; };
+		892328ED2922A18000679630 /* UIControl + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl + Extension.swift"; sourceTree = "<group>"; };
 		8949F4AE2900412400A77EDB /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
 		8949F4B12900414B00A77EDB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		8949F4B42900415C00A77EDB /* RulesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewModel.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				8A31245729016AA900BCCBB2 /* UIFont + Extension.swift */,
 				8A31245929016C9200BCCBB2 /* UIStackView + Extension.swift */,
 				8A80B1EE29084EF500E3CE40 /* UIColor + Extension.swift */,
+				892328ED2922A18000679630 /* UIControl + Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				8A1E92EE2909F29F00B8A58D /* StartRoundViewModel.swift in Sources */,
 				8AB4E2DE29003F5E00195D17 /* SettingsViewController.swift in Sources */,
 				89C60465290162FE0071A198 /* DataStorage.swift in Sources */,
+				892328EE2922A18000679630 /* UIControl + Extension.swift in Sources */,
 				8A84472B290C82D7006B8DA5 /* QuestionView.swift in Sources */,
 				8A3124682902D45E00BCCBB2 /* DevelopersViewController.swift in Sources */,
 				8949F4B52900415C00A77EDB /* RulesViewModel.swift in Sources */,

@@ -8,11 +8,9 @@
 import UIKit
 
 class StartRoundViewController: UIViewController {
+    private let comandNameLabel = CustomLabel(label: UILabel(text: "Начинает команда: Дереволазы", tintColor: .white),
+                                              cornerRadius: 20)
     
-    private let comandNameLabel = CustomLabel(
-        label: UILabel(text: "Начинает команда: Дереволазы", tintColor: .white),
-        cornerRadius: 20
-    )
     private let gameButton = UIButton(title: "Играть", titleColor: .white,
                                       backgroundColor: .lightPinkColor(),
                                       cornerRadius: 15)

@@ -8,7 +8,6 @@
 import UIKit
 
 class QuestionView: UIView {
-    
     convenience init(questionImage: UIImageView,
                      questionLabel: UILabel,
                      borderWidth: CGFloat = 2,

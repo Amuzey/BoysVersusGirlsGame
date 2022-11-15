@@ -29,14 +29,17 @@ class SettingsView: UIView {
         }
         
         let settingSlider = UISlider(minimumValue: minimumValue, maximumValue: maximumValue, step: stepForSlider)
+        
         let labelStackView = UIStackView(arrangedSubviews: [textLabel, valueLabel],
                                          axis: .horizontal,
                                          spacing: 20,
                                          distribution: .fillProportionally)
+        
         let sliderAndLabelStack = UIStackView(arrangedSubviews: [labelStackView, settingSlider],
                                               axis: .vertical,
                                               spacing: 5,
                                               distribution: .fillProportionally)
+        
         setupSubviews(sliderAndLabelStack)
         
         NSLayoutConstraint.activate([

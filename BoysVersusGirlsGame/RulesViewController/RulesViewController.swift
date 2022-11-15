@@ -8,7 +8,6 @@
 import UIKit
 
 class RulesViewController: UIViewController {
-    
     private var viewModel: RulesViewModelProtocol?
     
     private let showDevelopersButton = UIButton(title: "Разработчики",
@@ -17,9 +16,8 @@ class RulesViewController: UIViewController {
     private let rateTheAppButton = UIButton(title: "Оценить",
                                             titleColor: .white)
     
-    private let scrollView = UIScrollView(arrangedSubviews: UILabel(
-        text: DataStorage.shared.rules, numberOfLines: 0,
-        tintColor: .white)
+    private let scrollView = UIScrollView(
+        arrangedSubviews: UILabel(text: DataStorage.shared.rules, numberOfLines: 0, tintColor:.white)
     )
     
     override func viewDidLoad() {

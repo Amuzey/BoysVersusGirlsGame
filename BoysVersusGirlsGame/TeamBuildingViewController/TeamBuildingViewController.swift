@@ -8,7 +8,6 @@
 import UIKit
 
 class TeamBuildingViewController: UIViewController {
-    
     private let headerLabel = CustomLabel(
         label: UILabel(text: "Введите название женской команды:",
                        numberOfLines: 2,

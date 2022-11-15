@@ -8,7 +8,6 @@
 import UIKit
 
 class DevelopersViewController: UIViewController {
-    
     private let alexeyView = DeveloperView(
         imageView: UIImageView(image: UIImage(named: "Alexey")),
         text: UILabel(text: "iOSDeveloper, Alexey Ivanov",
@@ -38,7 +37,10 @@ extension DevelopersViewController {
     
     private func setupConstraints() {
         
-        let developerStackView = UIStackView(arrangedSubviews: [alexeyView, antonView], axis: .vertical, spacing: 20, distribution: .fillEqually)
+        let developerStackView = UIStackView(arrangedSubviews: [alexeyView, antonView],
+                                             axis: .vertical,
+                                             spacing: 20,
+                                             distribution: .fillEqually)
         
         setupSubviews(developerStackView)
         

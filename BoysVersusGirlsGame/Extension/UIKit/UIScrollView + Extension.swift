@@ -8,7 +8,6 @@
 import UIKit
 
 extension UIScrollView {
-    
     convenience init(arrangedSubviews: UIView,
                      borderColor: CGColor = UIColor.black.cgColor,
                      borderWidth: CGFloat = 2) {
