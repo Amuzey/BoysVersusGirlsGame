@@ -8,7 +8,9 @@
 import UIKit
 
 class StartViewController: UIViewController {
-    private let logoImageView = UIImageView(image: UIImage(named: "Logo"))
+    private let logoImageView = UIImageView(image: UIImage(named: "Logo"),
+                                            contentMode: .scaleAspectFit)
+    
     private let startButton = UIButton(title: "Начать",
                                        titleColor: .white,
                                        font: .systemFont(ofSize: 30))
@@ -19,7 +21,7 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
         viewModel = StartViewModel()
         view.backgroundColor = .mainColor()
-        logoImageView.contentMode = .scaleAspectFit
+        startButton.addTarget(self, action: #selector(moveToStart), for: .touchUpInside)
         setupNavigationBar()
         setupConstraints()
     }
@@ -30,24 +32,33 @@ class StartViewController: UIViewController {
                                              target: self,
                                              action: #selector(moveToSettings))
         navigationItem.rightBarButtonItem = settingsButton
-        let rulesButton = UIBarButtonItem(image: UIImage(systemName: "list.bullet.rectangle.portrait.fill"),
-                                          style: .plain, target: self,
-                                          action: #selector(moveToRules))
-        navigationItem.leftBarButtonItem = rulesButton
-    }
-    
-    @objc private func moveToSettings() {
-        let settingViewController = SettingsViewController()
-        present(settingViewController, animated: true)
-    }
-    
-    @objc private func moveToRules() {
-        let rulesViewController = RulesViewController()
-        present(rulesViewController, animated: true)
+
+        let rulesButton = UIButton(image: UIImage(named: "infoButton"))
+        rulesButton.addTarget(self, action: #selector(moveToRules), for: .touchUpInside)
+        let leftBarItem = UIBarButtonItem(customView: rulesButton)
+        navigationItem.leftBarButtonItem = leftBarItem
     }
 }
 
-//MARK: - Setup View
+//MARK: - Actions
+extension StartViewController {
+    @objc private func moveToRules() {
+        let rulesVC = RulesViewController()
+        navigationController?.pushViewController(rulesVC, animated: true)
+    }
+    
+    @objc private func moveToSettings() {
+        let settingVC = SettingsViewController()
+        navigationController?.pushViewController(settingVC, animated: true)
+    }
+    
+    @objc private func moveToStart() {
+        let teamBuildingVC = TeamBuildingViewController()
+        navigationController?.pushViewController(teamBuildingVC, animated: true)
+    }
+}
+
+//MARK: - Setup Constraints
 extension StartViewController {
     private func setupConstraints() {
         setupSubviews(logoImageView, startButton)

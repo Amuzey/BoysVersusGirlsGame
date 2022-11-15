@@ -11,7 +11,8 @@ class GameViewController: UIViewController {
     
     private let questionView = QuestionView(
         questionImage: UIImageView(image: UIImage(named: "fly")),
-        questionLabel: UILabel(text: "Для чего педали самолету?", tintColor: .white))
+        questionLabel: UILabel(text: "Для чего педали самолету?", tintColor: .white)
+    )
     
     private let firstAnswerButton = UIButton(title: "A. Управлять хвостом", titleColor: .white)
     private let seconAnswerButton = UIButton(title: "B. Набирать скорость", titleColor: .white)
@@ -27,6 +28,7 @@ class GameViewController: UIViewController {
     
 }
 
+//MARK: - Setup Constraints
 extension GameViewController {
     func setupConstraint() {
         let buttonStackView = UIStackView(arrangedSubviews: [firstAnswerButton, seconAnswerButton, thirdAnswerButton], axis: .vertical, spacing: 10, distribution: .fillEqually)

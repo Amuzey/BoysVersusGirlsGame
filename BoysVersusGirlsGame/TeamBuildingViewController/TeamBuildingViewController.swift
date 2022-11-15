@@ -30,7 +30,7 @@ class TeamBuildingViewController: UIViewController {
     }
 }
 
-//MARK: - Setup Constrains
+//MARK: - Setup Constraints
 extension TeamBuildingViewController {
     
     private func setupConstraints() {

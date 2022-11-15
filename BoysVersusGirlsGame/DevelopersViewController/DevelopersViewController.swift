@@ -10,7 +10,7 @@ import UIKit
 class DevelopersViewController: UIViewController {
     private let alexeyView = DeveloperView(
         imageView: UIImageView(image: UIImage(named: "Alexey")),
-        text: UILabel(text: "iOSDeveloper, Alexey Ivanov",
+        text: UILabel(text: "iOS Developer Alexey Ivanov",
                       font: .avenir20(),
                       numberOfLines: 0,
                       tintColor: .white),
@@ -19,8 +19,9 @@ class DevelopersViewController: UIViewController {
     
     private let antonView = DeveloperView(
         imageView: UIImageView(image: UIImage(named: "Anton")),
-        text: UILabel(text: "iOS Developer, Anton Mazur",
-                      font: .avenir20(), numberOfLines: 0,
+        text: UILabel(text: "iOS Developer Anton Mazur",
+                      font: .avenir20(),
+                      numberOfLines: 0,
                       tintColor: .white),
         cornerRadius: 20
     )
@@ -32,11 +33,9 @@ class DevelopersViewController: UIViewController {
     }
 }
 
-//MARK: - Setup Constrains
+//MARK: - Setup Constraints
 extension DevelopersViewController {
-    
     private func setupConstraints() {
-        
         let developerStackView = UIStackView(arrangedSubviews: [alexeyView, antonView],
                                              axis: .vertical,
                                              spacing: 20,

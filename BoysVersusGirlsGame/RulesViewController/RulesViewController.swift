@@ -17,24 +17,31 @@ class RulesViewController: UIViewController {
                                             titleColor: .white)
     
     private let scrollView = UIScrollView(
-        arrangedSubviews: UILabel(text: DataStorage.shared.rules, numberOfLines: 0, tintColor:.white)
+        arrangedSubviews: UILabel(text: DataStorage.shared.rules, numberOfLines: 0, tintColor:.white),
+        backgroundColor: .buttonColor(),
+        cornerRadius: 15
     )
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = RulesViewModel()
+        showDevelopersButton.addTarget(self, action: #selector(moveToDevelopers), for: .touchUpInside)
         setupConstraints()
         view.backgroundColor = .mainColor()
-        scrollView.backgroundColor = .buttonColor()
-        scrollView.layer.cornerRadius = 15
     }
 }
 
-// MARK: - Setup constrains
+//MARK: - Actions
 extension RulesViewController {
-    
+    @objc private func moveToDevelopers() {
+        let developersVC = DevelopersViewController()
+        navigationController?.pushViewController(developersVC, animated: true)
+    }
+}
+
+// MARK: - Setup Constraints
+extension RulesViewController {
     private func setupConstraints() {
-        
         let stackViewButton = UIStackView(arrangedSubviews: [showDevelopersButton, rateTheAppButton],
                                           axis: .vertical, spacing: 10, distribution: .fill)
         
