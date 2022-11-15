@@ -8,14 +8,13 @@
 import UIKit
 
 extension UIScrollView {
-    convenience init(arrangedSubviews: UIView,
-                     borderColor: CGColor = UIColor.black.cgColor,
-                     borderWidth: CGFloat = 2) {
+    convenience init(arrangedSubviews: UIView, backgroundColor: UIColor, cornerRadius: CGFloat) {
         self.init()
         self.addSubview(arrangedSubviews)
-        self.layer.borderColor = borderColor
-        self.layer.borderWidth = borderWidth
         arrangedSubviews.translatesAutoresizingMaskIntoConstraints = false
+        self.backgroundColor = backgroundColor
+        self.layer.cornerRadius = cornerRadius
+        self.showsVerticalScrollIndicator = false
         
         NSLayoutConstraint.activate([
             arrangedSubviews.topAnchor.constraint(equalTo: topAnchor, constant: 10),

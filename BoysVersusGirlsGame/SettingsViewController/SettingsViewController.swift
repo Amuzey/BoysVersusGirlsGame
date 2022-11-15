@@ -12,17 +12,17 @@ class SettingsViewController: UIViewController {
     
     private let numberOfQuestionsView = SettingsView(
         textLabel: UILabel(text: "Количество вопросов:", numberOfLines: 1, tintColor: .white),
-        valueLabel: UILabel(text: "12", numberOfLines: 1, tintColor: .white),
-        stepForSlider: 2,
+        valueLabel: UILabel(text: "5", numberOfLines: 1, tintColor: .white),
+        stepForSlider: 1,
         minimumValue: 5,
         maximumValue: 20
     )
     
     private let timeForAnswerView = SettingsView(
         textLabel: UILabel(text: "Время на ответ:", numberOfLines: 1, tintColor: .white),
-        valueLabel: UILabel(text: "0", numberOfLines: 1, tintColor: .white),
+        valueLabel: UILabel(text: "10", numberOfLines: 1, tintColor: .white),
         stepForSlider: 5,
-        minimumValue: 20,
+        minimumValue: 10,
         maximumValue: 50
     )
     
@@ -34,10 +34,13 @@ class SettingsViewController: UIViewController {
     }
 }
 
-//MARK: - Setup View
+//MARK: - Setup Constraints
 extension SettingsViewController {
     private func setupConstraints() {
-        let settingsStackView = UIStackView(arrangedSubviews: [numberOfQuestionsView, timeForAnswerView], axis: .vertical, spacing: 15, distribution: .fillEqually)
+        let settingsStackView = UIStackView(arrangedSubviews: [numberOfQuestionsView, timeForAnswerView],
+                                            axis: .vertical,
+                                            spacing: 15,
+                                            distribution: .fillEqually)
         setupSubviews(settingsStackView)
         
         NSLayoutConstraint.activate([

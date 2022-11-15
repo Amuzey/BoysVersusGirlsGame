@@ -11,7 +11,8 @@ class StartRoundViewController: UIViewController {
     private let comandNameLabel = CustomLabel(label: UILabel(text: "Начинает команда: Дереволазы", tintColor: .white),
                                               cornerRadius: 20)
     
-    private let gameButton = UIButton(title: "Играть", titleColor: .white,
+    private let gameButton = UIButton(title: "Играть",
+                                      titleColor: .white,
                                       backgroundColor: .lightPinkColor(),
                                       cornerRadius: 15)
     
@@ -22,7 +23,7 @@ class StartRoundViewController: UIViewController {
     }
 }
 
-//MARK: - Setup Constrains
+//MARK: - Setup Constraints
 extension StartRoundViewController {
    private func setupConstrains() {
        setupSubviews(comandNameLabel, gameButton)

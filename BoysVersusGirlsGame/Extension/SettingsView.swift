@@ -18,8 +18,7 @@ class SettingsView: UIView {
         self.init()
         self.backgroundColor = backgroundColor
         self.layer.cornerRadius = 30
-        self.layer.borderWidth = 2
-        self.layer.borderColor = UIColor.black.cgColor
+        valueLabel.textAlignment = .right
         
         if isShadow {
             self.layer.shadowColor = UIColor.black.cgColor
@@ -28,7 +27,12 @@ class SettingsView: UIView {
             self.layer.shadowOffset = CGSize(width: 0, height: 5)
         }
         
-        let settingSlider = UISlider(minimumValue: minimumValue, maximumValue: maximumValue, step: stepForSlider)
+        let settingSlider = UISlider(minimumValue: minimumValue, maximumValue: maximumValue)
+        
+        settingSlider.addAction(for: .valueChanged) {
+            settingSlider.value = round(settingSlider.value / stepForSlider) * stepForSlider
+            valueLabel.text = String(Int(settingSlider.value))
+        }
         
         let labelStackView = UIStackView(arrangedSubviews: [textLabel, valueLabel],
                                          axis: .horizontal,
