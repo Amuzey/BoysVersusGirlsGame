@@ -8,7 +8,6 @@
 import UIKit
 
 class ResultView: UIView {
-    
     convenience init(boysResult: String, girlsResult: String) {
         self.init()
         

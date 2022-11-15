@@ -8,7 +8,6 @@
 import UIKit
 
 extension UIColor {
-    
     static func mainColor() -> UIColor {
         UIColor(red: 57/255, green: 45/255, blue: 81/255, alpha: 1)
     }

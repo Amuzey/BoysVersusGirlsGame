@@ -8,9 +8,9 @@
 import UIKit
 
 extension UIButton {
-    
     convenience init(title: String,
                      titleColor: UIColor,
+                     action: (() -> ())? = nil,
                      backgroundColor: UIColor = .buttonColor(),
                      font: UIFont? = .avenir20(),
                      borderWidth: CGFloat = 2,
@@ -18,7 +18,7 @@ extension UIButton {
                      isShadow: Bool = true,
                      cornerRadius: CGFloat = 15) {
         self.init(type: .system)
-        
+        self.addAction(closure: action)
         setTitle(title, for: .normal)
         setTitleColor(titleColor, for: .normal)
         self.backgroundColor = backgroundColor

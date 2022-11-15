@@ -8,7 +8,6 @@
 import UIKit
 
 class StartViewController: UIViewController {
-    
     private let logoImageView = UIImageView(image: UIImage(named: "Logo"))
     private let startButton = UIButton(title: "Начать",
                                        titleColor: .white,
