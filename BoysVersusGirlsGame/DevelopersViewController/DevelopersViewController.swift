@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DevelopersViewController: UIViewController {
+class DevelopersViewController: BasicViewController {
     private let alexeyView = DeveloperView(
         imageView: UIImageView(image: UIImage(named: "Alexey")),
         text: UILabel(text: "iOS Developer Alexey Ivanov",

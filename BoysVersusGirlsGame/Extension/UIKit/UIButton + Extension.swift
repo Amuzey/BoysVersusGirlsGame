@@ -24,10 +24,10 @@ extension UIButton {
         layer.cornerRadius = cornerRadius
         
         if isShadow {
-            layer.shadowColor = UIColor.black.cgColor
-            layer.shadowRadius = 4
-            layer.shadowOpacity = 0.8
-            layer.shadowOffset = CGSize(width: 0, height: 5)
+            self.layer.shadowColor = UIColor.black.cgColor
+            self.layer.shadowRadius = 4
+            self.layer.shadowOpacity = 0.2
+            self.layer.shadowOffset = CGSize(width: 0, height: 4)
         }
     }
 }

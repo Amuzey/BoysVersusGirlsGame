@@ -34,6 +34,7 @@
 		8A76A35729046923001D38BD /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A35629046923001D38BD /* ResultViewController.swift */; };
 		8A76A35929046931001D38BD /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A35829046931001D38BD /* ResultViewModel.swift */; };
 		8A76A35B29046BB1001D38BD /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A35A29046BB1001D38BD /* ResultView.swift */; };
+		8A7BCDA8297B7ED3003DD681 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BCDA7297B7ED3003DD681 /* BasicViewController.swift */; };
 		8A80B1EF29084EF500E3CE40 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A80B1EE29084EF500E3CE40 /* UIColor + Extension.swift */; };
 		8A80B1F129091F7A00E3CE40 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A80B1F029091F7A00E3CE40 /* CustomTextField.swift */; };
 		8A80B1F32909226600E3CE40 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A80B1F22909226600E3CE40 /* CustomLabel.swift */; };
@@ -75,6 +76,7 @@
 		8A76A35629046923001D38BD /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		8A76A35829046931001D38BD /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		8A76A35A29046BB1001D38BD /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		8A7BCDA7297B7ED3003DD681 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		8A80B1EE29084EF500E3CE40 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		8A80B1F029091F7A00E3CE40 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		8A80B1F22909226600E3CE40 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				890441AF290971F9007F670E /* SettingsView.swift */,
+				8A7BCDA7297B7ED3003DD681 /* BasicViewController.swift */,
 				8A80B1F029091F7A00E3CE40 /* CustomTextField.swift */,
 				8A80B1F22909226600E3CE40 /* CustomLabel.swift */,
 				8A31246E2902DD4900BCCBB2 /* DeveloperView.swift */,
@@ -388,6 +391,7 @@
 				890441B229097391007F670E /* UISlider + Extension.swift in Sources */,
 				8A3124612902B49900BCCBB2 /* TeamBuildingViewController.swift in Sources */,
 				8A1E92EC2909F29000B8A58D /* StartRoundViewController.swift in Sources */,
+				8A7BCDA8297B7ED3003DD681 /* BasicViewController.swift in Sources */,
 				8A31245C2901775F00BCCBB2 /* UIScrollView + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

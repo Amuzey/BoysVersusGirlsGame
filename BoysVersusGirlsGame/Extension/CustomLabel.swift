@@ -16,13 +16,12 @@ class CustomLabel: UIView  {
         self.init()
         self.backgroundColor = backgroundColor
         self.layer.cornerRadius = cornerRadius
-        self.layer.borderWidth = 2
-        self.layer.borderColor = UIColor.black.cgColor
+    
         if isShadow {
             self.layer.shadowColor = UIColor.black.cgColor
             self.layer.shadowRadius = 4
-            self.layer.shadowOpacity = 0.8
-            self.layer.shadowOffset = CGSize(width: 0, height: 5)
+            self.layer.shadowOpacity = 0.2
+            self.layer.shadowOffset = CGSize(width: 0, height: 4)
         }
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false

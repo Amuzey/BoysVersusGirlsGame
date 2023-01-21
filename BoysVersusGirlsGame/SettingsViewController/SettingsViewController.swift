@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: BasicViewController {
     private var viewModel: SettingViewModelProtocol?
     
     private let numberOfQuestionsView = SettingsView(
@@ -33,6 +33,7 @@ class SettingsViewController: UIViewController {
         setupConstraints()
     }
 }
+
 
 //MARK: - Setup Constraints
 extension SettingsViewController {

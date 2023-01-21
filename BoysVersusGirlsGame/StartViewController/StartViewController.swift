@@ -8,6 +8,7 @@
 import UIKit
 
 class StartViewController: UIViewController {
+    
     private let logoImageView = UIImageView(image: UIImage(named: "Logo"),
                                             contentMode: .scaleAspectFit)
     
@@ -24,19 +25,21 @@ class StartViewController: UIViewController {
         startButton.addTarget(self, action: #selector(moveToStart), for: .touchUpInside)
         setupNavigationBar()
         setupConstraints()
+        
+        
     }
     
     private func setupNavigationBar() {
-        let settingsButton = UIBarButtonItem(image: UIImage(systemName: "gearshape.circle.fill"),
-                                             style: .plain,
-                                             target: self,
-                                             action: #selector(moveToSettings))
-        navigationItem.rightBarButtonItem = settingsButton
-
-        let rulesButton = UIButton(image: UIImage(named: "infoButton"))
+        
+        let rulesButton = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
+        rulesButton.setImage(UIImage(named: "infoButton"), for: .normal)
         rulesButton.addTarget(self, action: #selector(moveToRules), for: .touchUpInside)
-        let leftBarItem = UIBarButtonItem(customView: rulesButton)
-        navigationItem.leftBarButtonItem = leftBarItem
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: rulesButton)
+        
+        let settingsButton = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
+        settingsButton.setImage(UIImage(named: "settingbutton"), for: .normal)
+        settingsButton.addTarget(self, action: #selector(moveToSettings), for: .touchUpInside)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: settingsButton)
     }
 }
 

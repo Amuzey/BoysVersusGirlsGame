@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RulesViewController: UIViewController {
+class RulesViewController: BasicViewController {
     private var viewModel: RulesViewModelProtocol?
     
     private let showDevelopersButton = UIButton(title: "Разработчики",
