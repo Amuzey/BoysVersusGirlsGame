@@ -9,7 +9,7 @@ import UIKit
 
 extension UILabel {
     convenience init(text: String,
-                     font: UIFont? = .avenir20(),
+                     font: UIFont? = .сhalkboard20(),
                      numberOfLines: Int = 0,
                      tintColor: UIColor) {
         self.init()

@@ -7,26 +7,22 @@
 
 import UIKit
 
-class StartViewController: UIViewController {
+class StartViewController: BasicViewController {
     
     private let logoImageView = UIImageView(image: UIImage(named: "Logo"),
                                             contentMode: .scaleAspectFit)
     
-    private let startButton = UIButton(title: "Начать",
-                                       titleColor: .white,
-                                       font: .systemFont(ofSize: 30))
+    private let startButton = UIButton(title: "Начать", titleColor: .white)
     
     private var viewModel: StartViewModelProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         viewModel = StartViewModel()
-        view.backgroundColor = .mainColor()
         startButton.addTarget(self, action: #selector(moveToStart), for: .touchUpInside)
         setupNavigationBar()
         setupConstraints()
-        
-        
     }
     
     private func setupNavigationBar() {

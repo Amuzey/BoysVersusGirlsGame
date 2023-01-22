@@ -8,15 +8,15 @@
 import UIKit
 
 extension UIFont {
-    static func avenir20() -> UIFont? {
-        UIFont(name: "avenir", size: 20)
+    static func сhalkboard20() -> UIFont? {
+        UIFont(name: "ChalkboardSE-Bold", size: 20)
     }
     
-    static func avenir26() -> UIFont? {
-        UIFont(name: "avenir", size: 26)
+    static func сhalkboard26() -> UIFont? {
+        UIFont(name: "ChalkboardSE-Bold", size: 26)
     }
     
-    static func avenir35() -> UIFont? {
-        UIFont(name: "avenir", size: 35)
+    static func сhalkboard35() -> UIFont? {
+        UIFont(name: "ChalkboardSE-Bold", size: 35)
     }
 }

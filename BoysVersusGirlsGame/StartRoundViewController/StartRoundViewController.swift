@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StartRoundViewController: UIViewController {
+class StartRoundViewController: BasicViewController {
     private let comandNameLabel = CustomLabel(label: UILabel(text: "Начинает команда: Дереволазы", tintColor: .white),
                                               cornerRadius: 20)
     
@@ -18,7 +18,7 @@ class StartRoundViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .mainColor()
+        
         setupConstrains()
     }
 }
