@@ -23,10 +23,22 @@ class TeamBuildingViewController: BasicViewController {
                                            backgroundColor: .lightPinkColor(),
                                            cornerRadius: 25)
     
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .mainColor()
+        continuedButton.addTarget(self, action: #selector(moveToStartRounds), for: .touchUpInside)
         setupConstraints()
+    }
+}
+
+extension TeamBuildingViewController {
+    @objc private func moveToStartRounds() {
+        let startRoundVC = StartRoundViewController()
+        navigationController?.pushViewController(startRoundVC, animated: true)
     }
 }
 

@@ -14,8 +14,8 @@ class ResultView: UIView {
         self.backgroundColor = .blue
         self.layer.cornerRadius = 20
        
-        let boysLabel = UILabel(text: boysResult, font: .avenir35(), numberOfLines: 1, tintColor: .white)
-        let girlsLabel = UILabel(text: girlsResult, font: .avenir35(), numberOfLines: 1, tintColor: .white)
+        let boysLabel = UILabel(text: boysResult, font: .сhalkboard35(), numberOfLines: 1, tintColor: .white)
+        let girlsLabel = UILabel(text: girlsResult, font: .сhalkboard35(), numberOfLines: 1, tintColor: .white)
         
         
         let stackView = UIStackView(arrangedSubviews: [boysLabel, girlsLabel], axis: .horizontal, spacing: 20, distribution: .fill)

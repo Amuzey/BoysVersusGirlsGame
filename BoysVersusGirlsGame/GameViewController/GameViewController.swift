@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GameViewController: UIViewController {
+class GameViewController: BasicViewController {
     
     private let questionView = QuestionView(
         questionImage: UIImageView(image: UIImage(named: "fly")),
@@ -21,13 +21,25 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .mainColor()
+        
+        setupNavigationBar()
         setupConstraint()
     }
     
-    
+    private func setupNavigationBar() {
+        let exitButton = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
+        exitButton.setImage(UIImage(named: "infoButton"), for: .normal)
+        exitButton.addTarget(self, action: #selector(moveToStartVC), for: .touchUpInside)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: exitButton)
+    }
 }
 
+extension GameViewController {
+    @objc private func moveToStartVC() {
+        self.dismiss(animated: true)
+    }
+}
+    
 //MARK: - Setup Constraints
 extension GameViewController {
     func setupConstraint() {

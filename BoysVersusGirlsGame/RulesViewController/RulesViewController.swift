@@ -27,7 +27,6 @@ class RulesViewController: BasicViewController {
         viewModel = RulesViewModel()
         showDevelopersButton.addTarget(self, action: #selector(moveToDevelopers), for: .touchUpInside)
         setupConstraints()
-        view.backgroundColor = .mainColor()
     }
 }
 

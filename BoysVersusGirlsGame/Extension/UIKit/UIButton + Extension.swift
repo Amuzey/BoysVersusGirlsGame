@@ -12,7 +12,7 @@ extension UIButton {
                      image: UIImage? = nil,
                      titleColor: UIColor = .black,
                      backgroundColor: UIColor = .buttonColor(),
-                     font: UIFont? = .avenir20(),
+                     font: UIFont? = .сhalkboard26(),
                      isShadow: Bool = true,
                      cornerRadius: CGFloat = 15) {
         self.init(type: .system)

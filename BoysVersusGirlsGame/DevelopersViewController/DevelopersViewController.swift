@@ -11,7 +11,7 @@ class DevelopersViewController: BasicViewController {
     private let alexeyView = DeveloperView(
         imageView: UIImageView(image: UIImage(named: "Alexey")),
         text: UILabel(text: "iOS Developer Alexey Ivanov",
-                      font: .avenir20(),
+                      font: .сhalkboard20(),
                       numberOfLines: 0,
                       tintColor: .white),
         cornerRadius: 20
@@ -20,7 +20,7 @@ class DevelopersViewController: BasicViewController {
     private let antonView = DeveloperView(
         imageView: UIImageView(image: UIImage(named: "Anton")),
         text: UILabel(text: "iOS Developer Anton Mazur",
-                      font: .avenir20(),
+                      font: .сhalkboard20(),
                       numberOfLines: 0,
                       tintColor: .white),
         cornerRadius: 20
@@ -28,7 +28,7 @@ class DevelopersViewController: BasicViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .mainColor()
+
         setupConstraints()
     }
 }

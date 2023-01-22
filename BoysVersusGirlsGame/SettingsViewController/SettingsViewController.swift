@@ -29,7 +29,6 @@ class SettingsViewController: BasicViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = SettingViewModel()
-        view.backgroundColor = .mainColor()
         setupConstraints()
     }
 }
