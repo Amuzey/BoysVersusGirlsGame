@@ -8,10 +8,13 @@
 import UIKit
 
 class CustomLabel: UIView  {
+    
+    let label = UILabel()
+    
     convenience init(label: UILabel,
                      imageView: UIImageView? = nil,
                      backgroundColor: UIColor = .buttonColor(),
-                     cornerRadius: CGFloat,
+                     cornerRadius: CGFloat = 20,
                      isShadow: Bool = true) {
         self.init()
         self.backgroundColor = backgroundColor

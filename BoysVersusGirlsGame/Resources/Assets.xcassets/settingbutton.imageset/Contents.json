@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "setting button.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,7 +9,7 @@
       "scale" : "2x"
     },
     {
-      "filename" : "setting button 1.png",
+      "filename" : "setting button.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

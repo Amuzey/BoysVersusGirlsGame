@@ -65,24 +65,3 @@ extension RulesViewController {
         subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
     }
 }
-
-// MARK: - SwiftUI
-import SwiftUI
-
-struct RulesVCProvider: PreviewProvider {
-    static var previews: some View {
-        ContainerView().edgesIgnoringSafeArea(.all)
-    }
-    
-    struct ContainerView: UIViewControllerRepresentable {
-        
-        let viewController = RulesViewController()
-        
-        func makeUIViewController(context: Context) -> some UIViewController {
-            viewController
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        }
-    }
-}

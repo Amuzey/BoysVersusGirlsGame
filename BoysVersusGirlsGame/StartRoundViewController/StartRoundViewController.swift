@@ -8,6 +8,9 @@
 import UIKit
 
 class StartRoundViewController: BasicViewController {
+    
+    var teamName: SetupTeam?
+    
     private let comandNameLabel = CustomLabel(label: UILabel(text: "Начинает команда: Дереволазы", tintColor: .white),
                                               cornerRadius: 20)
     
@@ -46,27 +49,6 @@ extension StartRoundViewController {
         subviews.forEach {
             view.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
-        }
-    }
-}
-
-//MARK: - SwiftUI
-import SwiftUI
-
-struct StartRoundVCProvider: PreviewProvider {
-    static var previews: some View {
-        ContainerView().edgesIgnoringSafeArea(.all)
-    }
-    
-    struct ContainerView: UIViewControllerRepresentable {
-        
-        let viewController = StartRoundViewController()
-        
-        func makeUIViewController(context: Context) -> some UIViewController {
-            viewController
-        }
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-            
         }
     }
 }

@@ -48,8 +48,6 @@ extension DevelopersViewController {
             developerStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             developerStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
             developerStackView.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5)
-        
-            
         ])
         
     }
@@ -57,26 +55,5 @@ extension DevelopersViewController {
     private func setupSubviews(_ subviews: UIView...) {
         subviews.forEach { view.addSubview($0) }
         subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
-    }
-}
-
-//MARK: - SwiftUI
-import SwiftUI
-
-struct DevelopersVCProvider: PreviewProvider {
-    static var previews: some View {
-        ContainerView().edgesIgnoringSafeArea(.all)
-    }
-    
-    struct ContainerView: UIViewControllerRepresentable {
-        
-        let viewController = DevelopersViewController()
-        
-        func makeUIViewController(context: Context) -> some UIViewController {
-            viewController
-        }
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-            
-        }
     }
 }

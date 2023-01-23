@@ -8,21 +8,25 @@
 import UIKit
 
 class TeamBuildingViewController: BasicViewController {
+    
     private let headerLabel = CustomLabel(
-        label: UILabel(text: "Введите название женской команды:",
+        label: UILabel(text: "Введите названия команд:",
                        numberOfLines: 2,
                        tintColor: .white),
         cornerRadius: 20)
     
-    private let teamNameTextField = CustomTextField(
+    private let girlsTeamNameTextField = CustomTextField(
         imageView: UIImageView(image: UIImage(named: "GirlsLogo")),
-        cornerRadius: 20)
+        cornerRadius: 20, tintColor: UIColor.lightPinkColor())
+    
+    private let boysTeamNameTextField = CustomTextField(
+        imageView: UIImageView(image: UIImage(named: "BoysLogo")),
+        cornerRadius: 20, tintColor: UIColor.lightBlueColor())
     
     private let continuedButton = UIButton(title: "Продолжить",
                                            titleColor: .white,
-                                           backgroundColor: .lightPinkColor(),
+                                           backgroundColor: .buttonColor(),
                                            cornerRadius: 25)
-    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
@@ -30,23 +34,53 @@ class TeamBuildingViewController: BasicViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        continuedButton.addTarget(self, action: #selector(moveToStartRounds), for: .touchUpInside)
+        
+        continuedButton.addTarget(self, action: #selector(continueButtonTaped), for: .touchUpInside)
         setupConstraints()
     }
 }
 
+//MARK: - @objc Methods
 extension TeamBuildingViewController {
-    @objc private func moveToStartRounds() {
-        let startRoundVC = StartRoundViewController()
-        navigationController?.pushViewController(startRoundVC, animated: true)
+    @objc private func continueButtonTaped() {
+        guard let girlsName = girlsTeamNameTextField.textField.text else { return }
+        guard let boysName = boysTeamNameTextField.textField.text else { return }
+        if girlsName.isEmpty || boysName.isEmpty {
+            showAlert(title: "Введите название команд", message: "Названия отсутствуют, или введены неверно")
+        } else {
+            let teamName = SetupTeam(girlsName: girlsName, boysName: boysName)
+            let startRoundVC = StartRoundViewController()
+            startRoundVC.teamName = teamName
+            navigationController?.pushViewController(startRoundVC, animated: true)
+        }
     }
 }
+
+//MARK: - UIAlertController
+extension TeamBuildingViewController {
+    
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+            self.girlsTeamNameTextField.textField.text = ""
+            self.boysTeamNameTextField.textField.text = ""
+        }
+        
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+}
+
 
 //MARK: - Setup Constraints
 extension TeamBuildingViewController {
     
     private func setupConstraints() {
-        setupSubviews(headerLabel, teamNameTextField, continuedButton)
+        let teamNameStackView = UIStackView(
+            arrangedSubviews: [girlsTeamNameTextField, boysTeamNameTextField],
+            axis: .vertical, spacing: 10, distribution: .fillEqually
+        )
+        setupSubviews(headerLabel, teamNameStackView, continuedButton)
         
         NSLayoutConstraint.activate([
             headerLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
@@ -55,10 +89,10 @@ extension TeamBuildingViewController {
         ])
         
         NSLayoutConstraint.activate([
-            teamNameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            teamNameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
-            teamNameTextField.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            teamNameTextField.heightAnchor.constraint(equalToConstant: 75)
+            teamNameStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+            teamNameStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+            teamNameStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            teamNameStackView.heightAnchor.constraint(equalToConstant: 170)
         ])
         
         NSLayoutConstraint.activate([
@@ -72,26 +106,5 @@ extension TeamBuildingViewController {
     private func setupSubviews(_ subviews: UIView...) {
         subviews.forEach { view.addSubview($0) }
         subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
-    }
-}
-
-//MARK: - SwiftUI
-import SwiftUI
-
-struct TeamBuildingVCProvider: PreviewProvider {
-    static var previews: some View {
-        ContainerView().edgesIgnoringSafeArea(.all)
-    }
-    
-    struct ContainerView: UIViewControllerRepresentable {
-        
-        let viewController = TeamBuildingViewController()
-        
-        func makeUIViewController(context: Context) -> some UIViewController {
-            viewController
-        }
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-            
-        }
     }
 }
