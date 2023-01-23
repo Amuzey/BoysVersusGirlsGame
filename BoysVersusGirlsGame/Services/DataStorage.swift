@@ -26,5 +26,8 @@ class DataStorage {
         Ну что, ПОЕХАЛИ!!!
         """
     
+    var girlsTeamName: String?
+    var boysTeamName: String?
+    
     private init () {}
 }

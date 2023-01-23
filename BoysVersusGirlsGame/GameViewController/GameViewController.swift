@@ -58,24 +58,3 @@ extension GameViewController {
         ])
     }
 }
-
-//MARK: - SwiftUI
-import SwiftUI
-
-struct GameVCProvider: PreviewProvider {
-    static var previews: some View {
-        ContainerView().edgesIgnoringSafeArea(.all)
-    }
-    
-    struct ContainerView: UIViewControllerRepresentable {
-        
-        let viewController = GameViewController()
-        
-        func makeUIViewController(context: Context) -> some UIViewController {
-            viewController
-        }
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-            
-        }
-    }
-}

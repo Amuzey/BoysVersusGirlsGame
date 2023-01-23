@@ -11,7 +11,7 @@ extension UILabel {
     convenience init(text: String,
                      font: UIFont? = .сhalkboard20(),
                      numberOfLines: Int = 0,
-                     tintColor: UIColor) {
+                     tintColor: UIColor = .white) {
         self.init()
         
         self.text = text

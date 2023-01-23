@@ -8,17 +8,26 @@
 import UIKit
 
 class SettingsView: UIView {
+    
+    let settingSlider = UISlider()
+    
     convenience init(backgroundColor: UIColor = .buttonColor(),
                      textLabel: UILabel,
                      valueLabel: UILabel,
                      stepForSlider: Float,
                      minimumValue: Float,
                      maximumValue: Float,
+                     value: Float,
                      isShadow: Bool = true) {
         self.init()
         self.backgroundColor = backgroundColor
         self.layer.cornerRadius = 30
         valueLabel.textAlignment = .right
+        settingSlider.minimumTrackTintColor = .lightBlueColor()
+        settingSlider.maximumTrackTintColor = .lightPinkColor()
+        settingSlider.minimumValue = minimumValue
+        settingSlider.maximumValue = maximumValue
+        settingSlider.value = value
         
         if isShadow {
             self.layer.shadowColor = UIColor.black.cgColor
@@ -27,11 +36,10 @@ class SettingsView: UIView {
             self.layer.shadowOffset = CGSize(width: 0, height: 4)
         }
         
-        let settingSlider = UISlider(minimumValue: minimumValue, maximumValue: maximumValue)
         
         settingSlider.addAction(for: .valueChanged) {
-            settingSlider.value = round(settingSlider.value / stepForSlider) * stepForSlider
-            valueLabel.text = String(Int(settingSlider.value))
+            self.settingSlider.value = round(self.settingSlider.value / stepForSlider) * stepForSlider
+            valueLabel.text = String(Int(self.settingSlider.value))
         }
         
         let labelStackView = UIStackView(arrangedSubviews: [textLabel, valueLabel],

@@ -12,24 +12,40 @@ class SettingsViewController: BasicViewController {
     
     private let numberOfQuestionsView = SettingsView(
         textLabel: UILabel(text: "Количество вопросов:", numberOfLines: 1, tintColor: .white),
-        valueLabel: UILabel(text: "5", numberOfLines: 1, tintColor: .white),
+        valueLabel: UILabel(text: String(Int(UserSetting.numberOfQuestion)), numberOfLines: 1, tintColor: .white),
         stepForSlider: 1,
         minimumValue: 5,
-        maximumValue: 20
+        maximumValue: 20,
+        value: UserSetting.numberOfQuestion
     )
     
     private let timeForAnswerView = SettingsView(
         textLabel: UILabel(text: "Время на ответ:", numberOfLines: 1, tintColor: .white),
-        valueLabel: UILabel(text: "10", numberOfLines: 1, tintColor: .white),
+        valueLabel: UILabel(text: String(Int(UserSetting.timeForAnswer)), numberOfLines: 1, tintColor: .white),
         stepForSlider: 5,
         minimumValue: 10,
-        maximumValue: 50
+        maximumValue: 50,
+        value: UserSetting.timeForAnswer
     )
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = SettingViewModel()
         setupConstraints()
+        
+        numberOfQuestionsView.settingSlider.addTarget(self, action: #selector(sliderNumberValueChanged), for: .valueChanged)
+        timeForAnswerView.settingSlider.addTarget(self, action: #selector(sliderTimeValueChanged), for: .valueChanged)
+    }
+}
+
+extension SettingsViewController {
+    
+    @objc func sliderNumberValueChanged(sender: UISlider) {
+        UserSetting.numberOfQuestion = sender.value
+    }
+        
+    @objc func sliderTimeValueChanged(sender: UISlider) {
+        UserSetting.timeForAnswer = sender.value
     }
 }
 
@@ -55,27 +71,6 @@ extension SettingsViewController {
         subviews.forEach {
             view.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
-        }
-    }
-}
-
-//MARK: - SwiftUI
-import SwiftUI
-
-struct SettingsVCProvider: PreviewProvider {
-    static var previews: some View {
-        ContainerView().edgesIgnoringSafeArea(.all)
-    }
-    
-    struct ContainerView: UIViewControllerRepresentable {
-        
-        let viewController = SettingsViewController()
-        
-        func makeUIViewController(context: Context) -> some UIViewController {
-            viewController
-        }
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-            
         }
     }
 }
