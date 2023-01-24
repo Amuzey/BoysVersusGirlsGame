@@ -9,10 +9,12 @@ import UIKit
 
 class StartRoundViewController: BasicViewController {
     
-    var teamName: SetupTeam?
+    var teamName: SetupTeam!
+    var isGirl = true
     
-    private let comandNameLabel = CustomLabel(label: UILabel(text: "Начинает команда: Дереволазы", tintColor: .white),
-                                              cornerRadius: 20)
+    private lazy var comandNameLabel = isGirl
+    ? CustomLabel(text: teamName.girlsName)
+    : CustomLabel(text: teamName.boysName)
     
     private let gameButton = UIButton(title: "Играть",
                                       titleColor: .white,
@@ -21,28 +23,37 @@ class StartRoundViewController: BasicViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        gameButton.addTarget(self, action: #selector(startGame), for: .touchUpInside)
         setupConstrains()
+    }
+}
+
+//MARK: - objc Method
+extension StartRoundViewController {
+    @objc func startGame() {
+        isGirl = false
+        let gameVC = GameViewController()
+        navigationController?.pushViewController(gameVC, animated: true)
     }
 }
 
 //MARK: - Setup Constraints
 extension StartRoundViewController {
-   private func setupConstrains() {
-       setupSubviews(comandNameLabel, gameButton)
-       
-       NSLayoutConstraint.activate([
-        comandNameLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
-        comandNameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-        comandNameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30)
-       ])
-       
-       NSLayoutConstraint.activate([
-        gameButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-        gameButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-        gameButton.heightAnchor.constraint(equalTo: gameButton.widthAnchor),
-        gameButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6)
-       ])
+    private func setupConstrains() {
+        setupSubviews(comandNameLabel, gameButton)
+        
+        NSLayoutConstraint.activate([
+            comandNameLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
+            comandNameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            comandNameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30)
+        ])
+        
+        NSLayoutConstraint.activate([
+            gameButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            gameButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            gameButton.heightAnchor.constraint(equalTo: gameButton.widthAnchor),
+            gameButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6)
+        ])
     }
     
     private func setupSubviews(_ subviews: UIView...) {

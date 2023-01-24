@@ -11,7 +11,10 @@ class CustomLabel: UIView  {
     
     let label = UILabel()
     
-    convenience init(label: UILabel,
+    convenience init(text: String,
+                     font: UIFont? = .сhalkboard20(),
+                     numberOfLines: Int = 0,
+                     tintColor: UIColor = .white,
                      imageView: UIImageView? = nil,
                      backgroundColor: UIColor = .buttonColor(),
                      cornerRadius: CGFloat = 20,
@@ -26,6 +29,10 @@ class CustomLabel: UIView  {
             self.layer.shadowOpacity = 0.2
             self.layer.shadowOffset = CGSize(width: 0, height: 4)
         }
+        label.font = font
+        label.tintColor = tintColor
+        label.numberOfLines = numberOfLines
+        label.text = text
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         addSubview(label)

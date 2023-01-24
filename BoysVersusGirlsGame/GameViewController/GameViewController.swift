@@ -9,6 +9,8 @@ import UIKit
 
 class GameViewController: BasicViewController {
     
+    let question = Question.getQuestions()
+    
     private let questionView = QuestionView(
         questionImage: UIImageView(image: UIImage(named: "fly")),
         questionLabel: UILabel(text: "Для чего педали самолету?", tintColor: .white)
@@ -36,7 +38,7 @@ class GameViewController: BasicViewController {
 
 extension GameViewController {
     @objc private func moveToStartVC() {
-        self.dismiss(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
 }
     
