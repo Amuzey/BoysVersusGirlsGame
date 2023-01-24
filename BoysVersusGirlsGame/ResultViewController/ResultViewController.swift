@@ -10,13 +10,11 @@ import UIKit
 class ResultViewController: UIViewController {
     
     private let cupImageView = UIImageView(image: UIImage(named: "CupPicture"))
-    private let resultLabel = CustomLabel(label: UILabel(text: "Победила команда: Дереволазы",
-                                                         numberOfLines: 0,
-                                                         tintColor: .white),
+    private let resultLabel = CustomLabel(text: "Победила команда: Дереволазы",
                                           cornerRadius: 20)
     
     private let resultBoysView = CustomLabel(
-        label: UILabel(text: "7", tintColor: .white),
+        text: "7",
         imageView: UIImageView(image: UIImage(named: "Star")),
         backgroundColor: .lightBlueColor(),
         cornerRadius: 20,
@@ -24,7 +22,7 @@ class ResultViewController: UIViewController {
     )
     
     private let resultGirlsView = CustomLabel(
-        label: UILabel(text: "3", tintColor: .white),
+        text: "3",
         imageView: UIImageView(image: UIImage(named: "Star")),
         backgroundColor: .lightPinkColor(),
         cornerRadius: 20,

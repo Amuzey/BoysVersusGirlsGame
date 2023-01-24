@@ -48,6 +48,7 @@
 		8AB4E2D629003D0400195D17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB4E2D429003D0400195D17 /* LaunchScreen.storyboard */; };
 		8AB4E2DE29003F5E00195D17 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2DD29003F5E00195D17 /* SettingsViewController.swift */; };
 		8AB4E2E029003F6800195D17 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4E2DF29003F6800195D17 /* RulesViewController.swift */; };
+		8AEBA1D8297FC6290028A008 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEBA1D7297FC6290028A008 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		8AB4E2D729003D0400195D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AB4E2DD29003F5E00195D17 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8AB4E2DF29003F6800195D17 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		8AEBA1D7297FC6290028A008 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				8A7BCDB0297EDAF7003DD681 /* SetupTeam.swift */,
+				8AEBA1D7297FC6290028A008 /* Question.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				8AB4E2CC29003D0200195D17 /* SceneDelegate.swift in Sources */,
 				8A3124642902B4BD00BCCBB2 /* TeamBuildingViewModel.swift in Sources */,
 				8A31245329015D0100BCCBB2 /* UIButton + Extension.swift in Sources */,
+				8AEBA1D8297FC6290028A008 /* Question.swift in Sources */,
 				8A3124562901698400BCCBB2 /* UILabel + Extension.swift in Sources */,
 				8A1E92EE2909F29F00B8A58D /* StartRoundViewModel.swift in Sources */,
 				8AB4E2DE29003F5E00195D17 /* SettingsViewController.swift in Sources */,

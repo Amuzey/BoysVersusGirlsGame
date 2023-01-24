@@ -10,9 +10,7 @@ import UIKit
 class TeamBuildingViewController: BasicViewController {
     
     private let headerLabel = CustomLabel(
-        label: UILabel(text: "Введите названия команд:",
-                       numberOfLines: 2,
-                       tintColor: .white),
+        text: "Введите названия команд: ", 
         cornerRadius: 20)
     
     private let girlsTeamNameTextField = CustomTextField(
@@ -58,14 +56,12 @@ extension TeamBuildingViewController {
 
 //MARK: - UIAlertController
 extension TeamBuildingViewController {
-    
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
             self.girlsTeamNameTextField.textField.text = ""
             self.boysTeamNameTextField.textField.text = ""
         }
-        
         alert.addAction(okAction)
         present(alert, animated: true)
     }
