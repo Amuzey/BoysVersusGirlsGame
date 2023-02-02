@@ -9,12 +9,11 @@ import UIKit
 
 class StartRoundViewController: BasicViewController {
     
-    var teamName: SetupTeam!
-    var isGirl = true
+    var isGirl = SetupTeam.shared.isGirl
     
     private lazy var comandNameLabel = isGirl
-    ? CustomLabel(text: teamName.girlsName)
-    : CustomLabel(text: teamName.boysName)
+    ? CustomLabel(text: SetupTeam.shared.girlsName ?? "Нет имени")
+    : CustomLabel(text: SetupTeam.shared.boysName ?? "Нет имени")
     
     private let gameButton = UIButton(title: "Играть",
                                       titleColor: .white,
@@ -32,6 +31,7 @@ class StartRoundViewController: BasicViewController {
 extension StartRoundViewController {
     @objc func startGame() {
         isGirl = false
+
         let gameVC = GameViewController()
         navigationController?.pushViewController(gameVC, animated: true)
     }
