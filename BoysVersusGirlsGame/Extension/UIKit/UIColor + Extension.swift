@@ -43,4 +43,8 @@ extension UIColor {
     static func placeholderColor() -> UIColor {
         UIColor(red: 124/255, green: 123/255, blue: 123/255, alpha: 1)
     }
+    
+    static func newBackgroundColor() -> UIColor {
+        UIColor(red: 175/255, green: 74/255, blue: 77/255, alpha: 1)
+    }
 }

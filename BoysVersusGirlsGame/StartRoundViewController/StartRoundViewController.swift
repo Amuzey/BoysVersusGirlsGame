@@ -9,9 +9,7 @@ import UIKit
 
 class StartRoundViewController: BasicViewController {
     
-    var isGirl = SetupTeam.shared.isGirl
-    
-    private lazy var comandNameLabel = isGirl
+    private lazy var comandNameLabel = SetupTeam.shared.isGirl ?? false
     ? CustomLabel(text: SetupTeam.shared.girlsName ?? "Нет имени")
     : CustomLabel(text: SetupTeam.shared.boysName ?? "Нет имени")
     
@@ -30,8 +28,6 @@ class StartRoundViewController: BasicViewController {
 //MARK: - objc Method
 extension StartRoundViewController {
     @objc func startGame() {
-        isGirl = false
-
         let gameVC = GameViewController()
         navigationController?.pushViewController(gameVC, animated: true)
     }

@@ -8,14 +8,30 @@
 import Foundation
 
 class QuestionManager {
-    static func getQuestions() -> [Question] {
-        let quantity = Int(UserSetting.numberOfQuestion)
+        
+    static func getGirlQuestions() -> [Question] {
         var questions: [Question] = []
-        if quantity <= QuestionStore().questions.count {
-            for _ in 0..<quantity {
-                if let question = QuestionStore().questions.randomElement() {
-                    questions.append(question)
-                }
+
+        for question in QuestionStore().questions {
+            if questions.count == Int(UserSetting.numberOfQuestion) {
+                break
+            }
+            if question.sex == .female {
+                questions.append(question)
+            }
+        }
+        return questions
+    }
+    
+    static func getBoysQuestions() -> [Question]{
+        var questions: [Question] = []
+        
+        for question in QuestionStore().questions {
+            if questions.count == Int(UserSetting.numberOfQuestion)  {
+                break
+            }
+            if question.sex == .male {
+                questions.append(question)
             }
         }
         return questions
