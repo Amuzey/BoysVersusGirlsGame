@@ -10,7 +10,8 @@ import UIKit
 class GameViewController: BasicViewController {
     
     private let tableView = UITableView()
-    private let questions = QuestionManager.getQuestions()
+    private let girlQuestions = QuestionManager.getGirlQuestions()
+    private let boyQuestions = QuestionManager.getBoysQuestions()
     
     private var questionNumber = 0
     
@@ -50,7 +51,9 @@ extension GameViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath)
-        let question = questions[questionNumber]
+        let question = SetupTeam.shared.isGirl ?? true
+        ? girlQuestions[questionNumber]
+        : boyQuestions[questionNumber]
         var content = cell.defaultContentConfiguration()
         
         switch indexPath.row {
@@ -72,11 +75,12 @@ extension GameViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if questionNumber < questions.count - 1{
+        if questionNumber < girlQuestions.count - 1 {
+            
             questionNumber += 1
             tableView.reloadData()
         } else {
-            if SetupTeam.shared.isGirl {
+            if SetupTeam.shared.isGirl ?? true {
                 let startRoundVC = StartRoundViewController()
                 SetupTeam.shared.isGirlToggle()
                 navigationController?.pushViewController(startRoundVC, animated: true)

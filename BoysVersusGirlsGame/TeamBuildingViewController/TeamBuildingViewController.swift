@@ -49,7 +49,6 @@ extension TeamBuildingViewController {
             SetupTeam.shared.addGirl(name: girlsName)
             SetupTeam.shared.addBoy(name: boysName)
             let startRoundVC = StartRoundViewController()
-            
             navigationController?.pushViewController(startRoundVC, animated: true)
         }
     }

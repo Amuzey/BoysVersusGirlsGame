@@ -13,9 +13,9 @@ class SetupTeam {
     
     var girlsName: String?
     var boysName: String?
-    var isGirl: Bool = true
+    var isGirl: Bool? = true
     
-    init(girlsName: String?, boysName: String?, isGirl: Bool) {
+    init(girlsName: String?, boysName: String?, isGirl: Bool?) {
         self.girlsName = girlsName
         self.boysName = boysName
         self.isGirl = isGirl
@@ -32,6 +32,6 @@ class SetupTeam {
     }
     
     func isGirlToggle() {
-        isGirl.toggle()
+        isGirl?.toggle()
     }
 }

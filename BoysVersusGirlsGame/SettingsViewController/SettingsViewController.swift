@@ -14,7 +14,7 @@ class SettingsViewController: BasicViewController {
         textLabel: UILabel(text: "Количество вопросов:", numberOfLines: 1, tintColor: .white),
         valueLabel: UILabel(text: String(Int(UserSetting.numberOfQuestion)), numberOfLines: 1, tintColor: .white),
         stepForSlider: 1,
-        minimumValue: 5,
+        minimumValue: 3,
         maximumValue: 20,
         value: UserSetting.numberOfQuestion
     )
