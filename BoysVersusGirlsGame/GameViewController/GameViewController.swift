@@ -2,30 +2,30 @@
 //  GameViewController.swift
 //  BoysVersusGirlsGame
 //
-//  Created by Алексей on 27.10.2022.
+//  Created by Алексей on 01.02.2023.
 //
 
 import UIKit
 
 class GameViewController: BasicViewController {
     
-    let question = Question.getQuestions()
+    private let tableView = UITableView()
+    private let questions = QuestionManager.getQuestions()
     
-    private let questionView = QuestionView(
-        questionImage: UIImageView(image: UIImage(named: "fly")),
-        questionLabel: UILabel(text: "Для чего педали самолету?", tintColor: .white)
-    )
+    private var questionNumber = 0
     
-    private let firstAnswerButton = UIButton(title: "A. Управлять хвостом", titleColor: .white)
-    private let seconAnswerButton = UIButton(title: "B. Набирать скорость", titleColor: .white)
-    private let thirdAnswerButton = UIButton(title: "C. Заряжать аккумулятор", titleColor: .white)
-    
+    override func loadView() {
+        view = tableView
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupNavigationBar()
-        setupConstraint()
+                
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "QuestionCell")
     }
     
     private func setupNavigationBar() {
@@ -41,22 +41,68 @@ extension GameViewController {
         navigationController?.popToRootViewController(animated: true)
     }
 }
+
+extension GameViewController: UITableViewDataSource, UITableViewDelegate {
     
-//MARK: - Setup Constraints
-extension GameViewController {
-    func setupConstraint() {
-        let buttonStackView = UIStackView(arrangedSubviews: [firstAnswerButton, seconAnswerButton, thirdAnswerButton], axis: .vertical, spacing: 10, distribution: .fillEqually)
-        let stackView = UIStackView(arrangedSubviews: [questionView, buttonStackView], axis: .vertical, spacing: 70, distribution: .fill)
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath)
+        let question = questions[questionNumber]
+        var content = cell.defaultContentConfiguration()
         
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(stackView)
+        switch indexPath.row {
+        case 0:
+            content.image = UIImage(named: question.image)
+        case 1:
+            content.text = question.title
+        case 2:
+            content.text = question.answer[0].title
+        case 3:
+            content.text = question.answer[1].title
+        case 4:
+            content.text = question.answer[2].title
+        default:
+            break
+        }
+        cell.contentConfiguration = content
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if questionNumber < questions.count - 1{
+            questionNumber += 1
+            tableView.reloadData()
+        } else {
+            if SetupTeam.shared.isGirl {
+                let startRoundVC = StartRoundViewController()
+                SetupTeam.shared.isGirlToggle()
+                navigationController?.pushViewController(startRoundVC, animated: true)
+            } else {
+                let resultVC = ResultViewController()
+                navigationController?.pushViewController(resultVC, animated: true)
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        NSLayoutConstraint.activate([
-            questionView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5),
-            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
-            stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40)
-        ])
+        switch indexPath.row {
+        case 0:
+            return 250
+        case 1:
+            return 100
+        default:
+            return 60
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if indexPath.row <= 1 {
+            return nil
+        }
+        return indexPath
     }
 }

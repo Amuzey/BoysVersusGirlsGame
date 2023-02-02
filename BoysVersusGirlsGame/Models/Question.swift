@@ -12,16 +12,6 @@ struct Question {
     let image: String
     let title: String
     let answer: [Answer]
-    
-    static func getQuestions() -> [Question] {
-        
-        [Question(sex: .female,
-                  image: "fly",
-                  title: "Зачем педали самолету?",
-                  answer: [Answer(title: "Управлять хвостом", correct: true),
-                           Answer(title: "Набирать скорость", correct: false),
-                           Answer(title: "Заряжать аккумулятор", correct: false)])]
-    }
 }
 
 struct Answer {

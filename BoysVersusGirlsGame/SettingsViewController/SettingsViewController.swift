@@ -42,10 +42,12 @@ extension SettingsViewController {
     
     @objc func sliderNumberValueChanged(sender: UISlider) {
         UserSetting.numberOfQuestion = sender.value
+        viewModel?.howManyQuestions(quantity: Int(numberOfQuestionsView.settingSlider.value))
     }
         
     @objc func sliderTimeValueChanged(sender: UISlider) {
         UserSetting.timeForAnswer = sender.value
+        viewModel?.howManyTime(quantity: Int(timeForAnswerView.settingSlider.value))
     }
 }
 

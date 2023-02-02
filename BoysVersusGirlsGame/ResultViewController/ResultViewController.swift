@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ResultViewController: UIViewController {
+class ResultViewController: BasicViewController {
     
     private let cupImageView = UIImageView(image: UIImage(named: "CupPicture"))
     private let resultLabel = CustomLabel(text: "Победила команда: Дереволазы",

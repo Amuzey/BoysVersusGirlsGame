@@ -46,9 +46,10 @@ extension TeamBuildingViewController {
         if girlsName.isEmpty || boysName.isEmpty {
             showAlert(title: "Введите название команд", message: "Названия отсутствуют, или введены неверно")
         } else {
-            let teamName = SetupTeam(girlsName: girlsName, boysName: boysName)
+            SetupTeam.shared.addGirl(name: girlsName)
+            SetupTeam.shared.addBoy(name: boysName)
             let startRoundVC = StartRoundViewController()
-            startRoundVC.teamName = teamName
+            
             navigationController?.pushViewController(startRoundVC, animated: true)
         }
     }

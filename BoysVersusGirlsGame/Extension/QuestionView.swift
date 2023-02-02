@@ -8,7 +8,11 @@
 import UIKit
 
 class QuestionView: UIView {
-    convenience init(questionImage: UIImageView,
+    
+    let questionImage = UIImage()
+    let questionLabel = UILabel()
+    
+    convenience init(questionImage: UIImage,
                      questionLabel: UILabel,
                      isShadow: Bool = true
     ) {
@@ -24,21 +28,22 @@ class QuestionView: UIView {
             self.layer.shadowOpacity = 0.2
             self.layer.shadowOffset = CGSize(width: 0, height: 4)
         }
-
-        questionImage.translatesAutoresizingMaskIntoConstraints = false
+        
+        let questionImageView = UIImageView(image: questionImage)
+        questionImageView.translatesAutoresizingMaskIntoConstraints = false
         questionLabel.translatesAutoresizingMaskIntoConstraints = false
-        questionImage.contentMode = .scaleAspectFill
+        questionImageView.contentMode = .scaleAspectFill
         addSubview(questionLabel)
-        addSubview(questionImage)
+        addSubview(questionImageView)
         
         NSLayoutConstraint.activate([
-            questionImage.topAnchor.constraint(equalTo: topAnchor),
-            questionImage.leadingAnchor.constraint(equalTo: leadingAnchor),
-            questionImage.trailingAnchor.constraint(equalTo: trailingAnchor),
+            questionImageView.topAnchor.constraint(equalTo: topAnchor),
+            questionImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            questionImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
         
         ])
         NSLayoutConstraint.activate([
-            questionLabel.topAnchor.constraint(equalTo: questionImage.bottomAnchor,constant: 20),
+            questionLabel.topAnchor.constraint(equalTo: questionImageView.bottomAnchor,constant: 20),
             questionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             questionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             questionLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
