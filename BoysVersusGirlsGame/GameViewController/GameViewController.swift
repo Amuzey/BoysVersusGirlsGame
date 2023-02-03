@@ -13,6 +13,8 @@ class GameViewController: BasicViewController {
     private let girlQuestions = QuestionManager.getGirlQuestions()
     private let boyQuestions = QuestionManager.getBoysQuestions()
     
+    private var girlsCorrectAnswerCount = 0
+    private var boysCorrectAnswerCount = 0
     private var questionNumber = 0
     
     override func loadView() {
@@ -23,7 +25,7 @@ class GameViewController: BasicViewController {
         super.viewDidLoad()
         
         setupNavigationBar()
-                
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "QuestionCell")
@@ -75,8 +77,12 @@ extension GameViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if SetupTeam.shared.isGirl ?? true {
+           
+        }
+
         if questionNumber < girlQuestions.count - 1 {
-            
             questionNumber += 1
             tableView.reloadData()
         } else {
@@ -89,6 +95,7 @@ extension GameViewController: UITableViewDataSource, UITableViewDelegate {
                 navigationController?.pushViewController(resultVC, animated: true)
             }
         }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
