@@ -8,21 +8,21 @@
 import UIKit
 
 class ResultViewController: BasicViewController {
-    
+
     private let cupImageView = UIImageView(image: UIImage(named: "CupPicture"))
     private let resultLabel = CustomLabel(text: "Победила команда: Дереволазы",
                                           cornerRadius: 20)
     
-    private let resultBoysView = CustomLabel(
-        text: "7",
+    private lazy var resultBoysView = CustomLabel(
+        text: "5",
         imageView: UIImageView(image: UIImage(named: "Star")),
         backgroundColor: .lightBlueColor(),
         cornerRadius: 20,
         isShadow: true
     )
     
-    private let resultGirlsView = CustomLabel(
-        text: "3",
+    private lazy var resultGirlsView = CustomLabel(
+        text: "2",
         imageView: UIImageView(image: UIImage(named: "Star")),
         backgroundColor: .lightPinkColor(),
         cornerRadius: 20,
