@@ -13,9 +13,8 @@ class GameViewController: BasicViewController {
     private let girlQuestions = QuestionManager.getGirlQuestions()
     private let boyQuestions = QuestionManager.getBoysQuestions()
     
-    private var girlsCorrectAnswerCount = 0
-    private var boysCorrectAnswerCount = 0
     private var questionNumber = 0
+    private var selectAnswerIndex: Int? = nil
     
     override func loadView() {
         view = tableView
@@ -78,10 +77,22 @@ extension GameViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        selectAnswerIndex = indexPath.row - 2
+        
         if SetupTeam.shared.isGirl ?? true {
-           
+            let answer = girlQuestions[questionNumber].answer
+            guard let index = selectAnswerIndex else { return }
+            if answer[index].correct {
+                SetupTeam.shared.addCorrectAnswerGirls()
+            }
+        } else {
+            let answer = boyQuestions[questionNumber].answer
+            guard let index = selectAnswerIndex else { return }
+            if answer[index].correct {
+                SetupTeam.shared.addCorrectAnswerBoys()
+            }
         }
-
+        
         if questionNumber < girlQuestions.count - 1 {
             questionNumber += 1
             tableView.reloadData()
