@@ -14,6 +14,8 @@ class SetupTeam {
     var girlsName: String?
     var boysName: String?
     var isGirl: Bool? = true
+    var girlsAnswerCorrectCount: Int = 0
+    var boysAnswerCorrectCount: Int = 0
     
     init(girlsName: String?, boysName: String?, isGirl: Bool?) {
         self.girlsName = girlsName
@@ -33,5 +35,13 @@ class SetupTeam {
     
     func isGirlToggle() {
         isGirl?.toggle()
+    }
+    
+    func addCorrectAnswerGirls() {
+        girlsAnswerCorrectCount += 1
+    }
+    
+    func addCorrectAnswerBoys() {
+        boysAnswerCorrectCount += 1
     }
 }

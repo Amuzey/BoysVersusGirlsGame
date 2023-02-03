@@ -9,12 +9,13 @@ import UIKit
 
 class ResultViewController: BasicViewController {
 
+    private var winningTeam: String? = nil
     private let cupImageView = UIImageView(image: UIImage(named: "CupPicture"))
-    private let resultLabel = CustomLabel(text: "Победила команда: Дереволазы",
+    private lazy var resultLabel = CustomLabel(text: winningTeam ?? "Что то пошло не так...",
                                           cornerRadius: 20)
     
     private lazy var resultBoysView = CustomLabel(
-        text: "5",
+        text: String(SetupTeam.shared.boysAnswerCorrectCount),
         imageView: UIImageView(image: UIImage(named: "Star")),
         backgroundColor: .lightBlueColor(),
         cornerRadius: 20,
@@ -22,7 +23,7 @@ class ResultViewController: BasicViewController {
     )
     
     private lazy var resultGirlsView = CustomLabel(
-        text: "2",
+        text: String(SetupTeam.shared.girlsAnswerCorrectCount),
         imageView: UIImageView(image: UIImage(named: "Star")),
         backgroundColor: .lightPinkColor(),
         cornerRadius: 20,
@@ -33,6 +34,14 @@ class ResultViewController: BasicViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if SetupTeam.shared.girlsAnswerCorrectCount > SetupTeam.shared.boysAnswerCorrectCount {
+            winningTeam = "Победила команда: \(String(describing: SetupTeam.shared.girlsName))"
+        } else if SetupTeam.shared.girlsAnswerCorrectCount < SetupTeam.shared.boysAnswerCorrectCount {
+            winningTeam = "Победила команда: \(String(describing: SetupTeam.shared.boysName))"
+        } else {
+            winningTeam = "Ничья!!!"
+        }
         
         cupImageView.contentMode = .scaleAspectFit
         setupConstraints()
