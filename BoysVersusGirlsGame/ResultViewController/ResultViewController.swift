@@ -80,7 +80,6 @@ extension ResultViewController {
 
 extension ResultViewController {
     @objc func repeatGame() {
-        let startVC = StartViewController()
         navigationController?.popToRootViewController(animated: true)
     }
 }
