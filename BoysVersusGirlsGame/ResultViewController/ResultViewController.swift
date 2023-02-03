@@ -43,6 +43,8 @@ class ResultViewController: BasicViewController {
             winningTeam = "Ничья!!!"
         }
         
+        repeatButton.addTarget(self, action: #selector(repeatGame), for: .touchUpInside)
+        
         cupImageView.contentMode = .scaleAspectFit
         setupConstraints()
     }
@@ -73,5 +75,12 @@ extension ResultViewController {
     private func setupSubviews(_ subviews: UIView...) {
         subviews.forEach { view.addSubview($0) }
         subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
+    }
+}
+
+extension ResultViewController {
+    @objc func repeatGame() {
+        let startVC = StartViewController()
+        navigationController?.popToRootViewController(animated: true)
     }
 }
