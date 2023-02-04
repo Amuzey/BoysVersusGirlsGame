@@ -7,11 +7,9 @@
 
 import UIKit
 
-class StartViewController: BasicViewController {
+final class StartViewController: BasicViewController {
     
-    private let logoImageView = UIImageView(image: UIImage(named: "Logo"),
-                                            contentMode: .scaleAspectFit)
-    
+    private let logoImageView = UIImageView(image: UIImage(named: "Logo"))
     private let startButton = UIButton(title: "Начать", titleColor: .white)
     
     private var viewModel: StartViewModelProtocol?

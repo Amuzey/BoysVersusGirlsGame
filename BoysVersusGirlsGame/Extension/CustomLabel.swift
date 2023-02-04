@@ -31,6 +31,7 @@ class CustomLabel: UIView  {
         }
         label.font = font
         label.tintColor = tintColor
+        label.textColor = .white
         label.numberOfLines = numberOfLines
         label.text = text
         label.textAlignment = .center
