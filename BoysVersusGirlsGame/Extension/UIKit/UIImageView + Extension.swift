@@ -8,7 +8,8 @@
 import UIKit
 
 extension UIImageView {
-    convenience init(image: UIImage?, contentMode: UIView.ContentMode) {
+    convenience init(image: UIImage?,
+                     contentMode: UIView.ContentMode = .scaleAspectFit) {
         self.init()
         self.image = image
         self.contentMode = contentMode

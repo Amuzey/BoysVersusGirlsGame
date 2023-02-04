@@ -2,14 +2,17 @@
 //  GameViewController.swift
 //  BoysVersusGirlsGame
 //
-//  Created by Алексей on 01.02.2023.
+//  Created by Алексей on 04.02.2023.
 //
+
+import Foundation
 
 import UIKit
 
 class GameViewController: BasicViewController {
     
-    private let tableView = UITableView()
+    private let flowLayout = UICollectionViewFlowLayout()
+    private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
     private let girlQuestions = QuestionManager.getGirlQuestions()
     private let boyQuestions = QuestionManager.getBoysQuestions()
     
@@ -17,7 +20,7 @@ class GameViewController: BasicViewController {
     private var selectAnswerIndex: Int? = nil
     
     override func loadView() {
-        view = tableView
+        view = collectionView
     }
     
     override func viewDidLoad() {
@@ -25,9 +28,9 @@ class GameViewController: BasicViewController {
         
         setupNavigationBar()
         
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "QuestionCell")
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(QuestionCollectionViewCell.self, forCellWithReuseIdentifier: "QuestionCell")
     }
     
     private func setupNavigationBar() {
@@ -44,40 +47,24 @@ extension GameViewController {
     }
 }
 
-extension GameViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+extension GameViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        5
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuestionCell", for: indexPath) as? QuestionCollectionViewCell else { return UICollectionViewCell() }
         let question = SetupTeam.shared.isGirl ?? true
         ? girlQuestions[questionNumber]
         : boyQuestions[questionNumber]
-        var content = cell.defaultContentConfiguration()
         
-        switch indexPath.row {
-        case 0:
-            content.image = UIImage(named: question.image)
-        case 1:
-            content.text = question.title
-        case 2:
-            content.text = question.answer[0].title
-        case 3:
-            content.text = question.answer[1].title
-        case 4:
-            content.text = question.answer[2].title
-        default:
-            break
-        }
-        cell.contentConfiguration = content
+        cell.configure(question: question, indexPath: indexPath)
+        
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        selectAnswerIndex = indexPath.row - 2
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectAnswerIndex = indexPath.item - 2
         
         if SetupTeam.shared.isGirl ?? true {
             let answer = girlQuestions[questionNumber].answer
@@ -95,7 +82,7 @@ extension GameViewController: UITableViewDataSource, UITableViewDelegate {
         
         if questionNumber < girlQuestions.count - 1 {
             questionNumber += 1
-            tableView.reloadData()
+            collectionView.reloadData()
         } else {
             if SetupTeam.shared.isGirl ?? true {
                 let startRoundVC = StartRoundViewController()
@@ -106,25 +93,29 @@ extension GameViewController: UITableViewDataSource, UITableViewDelegate {
                 navigationController?.pushViewController(resultVC, animated: true)
             }
         }
-        
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        if indexPath.item <= 1 {
+            return false
+        }
+        return true
+    }
+}
+
+// MARK: UICollectionViewDelegate
+extension GameViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        switch indexPath.row {
+        switch indexPath.item {
         case 0:
-            return 250
+            return CGSize(width: view.frame.width, height: view.frame.width)
         case 1:
-            return 100
+            return CGSize(width: view.frame.width, height: 100)
         default:
-            return 60
+            return CGSize(width: view.frame.width, height: 60)
         }
     }
     
-    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        if indexPath.row <= 1 {
-            return nil
-        }
-        return indexPath
-    }
+    
 }

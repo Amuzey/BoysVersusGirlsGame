@@ -81,5 +81,6 @@ extension ResultViewController {
 extension ResultViewController {
     @objc func repeatGame() {
         navigationController?.popToRootViewController(animated: true)
+        SetupTeam.shared.resetAll()
     }
 }

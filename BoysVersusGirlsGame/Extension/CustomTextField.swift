@@ -21,6 +21,7 @@ class CustomTextField: UIView  {
         self.backgroundColor = backgroundColor
         self.layer.cornerRadius = cornerRadius
         textField.tintColor = tintColor
+        textField.textColor = .white
         textField.borderStyle = .none
         textField.font = font
         

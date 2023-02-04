@@ -44,4 +44,12 @@ class SetupTeam {
     func addCorrectAnswerBoys() {
         boysAnswerCorrectCount += 1
     }
+    
+    func resetAll() {
+        girlsName = nil
+        boysName = nil
+        isGirl = true
+        girlsAnswerCorrectCount = 0
+        boysAnswerCorrectCount = 0
+    }
 }
