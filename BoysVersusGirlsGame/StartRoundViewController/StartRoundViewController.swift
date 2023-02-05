@@ -9,13 +9,15 @@ import UIKit
 
 class StartRoundViewController: BasicViewController {
     
-    private lazy var comandNameLabel = SetupTeam.shared.isGirl ?? false
+    private lazy var comandNameLabel = SetupTeam.shared.isGirl ?? true
     ? CustomLabel(text: SetupTeam.shared.girlsName ?? "Нет имени")
     : CustomLabel(text: SetupTeam.shared.boysName ?? "Нет имени")
     
-    private let gameButton = UIButton(title: "Играть",
+    private lazy var gameButton = UIButton(title: "Играть",
                                       titleColor: .white,
-                                      backgroundColor: .lightPinkColor(),
+                                      backgroundColor: SetupTeam.shared.isGirl ?? true
+                                      ? .lightPinkColor()
+                                      : .lightBlueColor(),
                                       cornerRadius: 15)
     
     override func viewDidLoad() {

@@ -35,7 +35,7 @@ class GameViewController: BasicViewController {
     
     private func setupNavigationBar() {
         let exitButton = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
-        exitButton.setImage(UIImage(named: "infoButton"), for: .normal)
+        exitButton.setImage(UIImage(named: "exitButton"), for: .normal)
         exitButton.addTarget(self, action: #selector(moveToStartVC), for: .touchUpInside)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: exitButton)
     }
@@ -103,19 +103,21 @@ extension GameViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
 }
 
-// MARK: UICollectionViewDelegate
+// MARK: UICollectionViewDelegateFlowLayout
 extension GameViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         switch indexPath.item {
         case 0:
-            return CGSize(width: view.frame.width, height: view.frame.width)
+            return CGSize(width: view.frame.width - 60, height: view.frame.width - 60)
         case 1:
-            return CGSize(width: view.frame.width, height: 100)
+            return CGSize(width: view.frame.width - 60, height: 100)
         default:
-            return CGSize(width: view.frame.width, height: 60)
+            return CGSize(width: view.frame.width - 60, height: 60)
         }
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+            return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        }
 }
