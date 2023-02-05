@@ -32,7 +32,6 @@
 		8A31246F2902DD4900BCCBB2 /* DeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A31246E2902DD4900BCCBB2 /* DeveloperView.swift */; };
 		8A76A35729046923001D38BD /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A35629046923001D38BD /* ResultViewController.swift */; };
 		8A76A35929046931001D38BD /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A35829046931001D38BD /* ResultViewModel.swift */; };
-		8A76A35B29046BB1001D38BD /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A35A29046BB1001D38BD /* ResultView.swift */; };
 		8A7BCDA8297B7ED3003DD681 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BCDA7297B7ED3003DD681 /* BasicViewController.swift */; };
 		8A7BCDAB297E3F99003DD681 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BCDAA297E3F99003DD681 /* UserSettings.swift */; };
 		8A7BCDB1297EDAF7003DD681 /* SetupTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BCDB0297EDAF7003DD681 /* SetupTeam.swift */; };
@@ -80,7 +79,6 @@
 		8A31246E2902DD4900BCCBB2 /* DeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperView.swift; sourceTree = "<group>"; };
 		8A76A35629046923001D38BD /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		8A76A35829046931001D38BD /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
-		8A76A35A29046BB1001D38BD /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		8A7BCDA7297B7ED3003DD681 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		8A7BCDAA297E3F99003DD681 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		8A7BCDB0297EDAF7003DD681 /* SetupTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTeam.swift; sourceTree = "<group>"; };
@@ -215,7 +213,6 @@
 				8A80B1F029091F7A00E3CE40 /* CustomTextField.swift */,
 				8A80B1F22909226600E3CE40 /* CustomLabel.swift */,
 				8A31246E2902DD4900BCCBB2 /* DeveloperView.swift */,
-				8A76A35A29046BB1001D38BD /* ResultView.swift */,
 				8A84472A290C82D7006B8DA5 /* QuestionView.swift */,
 				8A31245429015D0E00BCCBB2 /* UIKit */,
 			);
@@ -390,7 +387,6 @@
 				8A1E92E32909F17200B8A58D /* GameViewModel.swift in Sources */,
 				8A80B1F32909226600E3CE40 /* CustomLabel.swift in Sources */,
 				8AB4E2E029003F6800195D17 /* RulesViewController.swift in Sources */,
-				8A76A35B29046BB1001D38BD /* ResultView.swift in Sources */,
 				8A7BCDAB297E3F99003DD681 /* UserSettings.swift in Sources */,
 				8A76A35729046923001D38BD /* ResultViewController.swift in Sources */,
 				8AEBA1E4298E94150028A008 /* GameViewController.swift in Sources */,
