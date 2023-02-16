@@ -25,14 +25,27 @@ class StartRoundViewController: BasicViewController {
         
         gameButton.addTarget(self, action: #selector(startGame), for: .touchUpInside)
         setupConstrains()
+        setupNavigationBar()
+    }
+    
+    // MARK: - Private methods
+    private func setupNavigationBar() {
+        let exitButton = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
+        exitButton.setImage(UIImage(named: "exitButton"), for: .normal)
+        exitButton.addTarget(self, action: #selector(moveToStartVC), for: .touchUpInside)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: exitButton)
     }
 }
 
 //MARK: - objc Method
 extension StartRoundViewController {
-    @objc func startGame() {
+    @objc private func startGame() {
         let gameVC = QuestionViewController()
         navigationController?.pushViewController(gameVC, animated: true)
+    }
+    
+    @objc private func moveToStartVC() {
+        navigationController?.popToRootViewController(animated: true)
     }
 }
 

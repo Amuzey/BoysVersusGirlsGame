@@ -25,6 +25,9 @@ class QuestionCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .сhalkboard20()
         label.textColor = .white
+        label.numberOfLines = 0
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.5
     
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
@@ -32,7 +35,8 @@ class QuestionCell: UICollectionViewCell {
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             
-            label.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 3),
+            label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -3),
             label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             label.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20)
         ])
@@ -56,7 +60,6 @@ class QuestionCell: UICollectionViewCell {
             imageView.image = UIImage(named: question.image)
         case 1:
             label.text = question.title
-            label.numberOfLines = 0
         case 2:
             label.text = question.answer[0].title
         case 3:

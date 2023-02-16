@@ -37,8 +37,6 @@ class ResultViewController: BasicViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupNavigationBar()
-        
         if SetupTeam.shared.girlsAnswerCorrectCount > SetupTeam.shared.boysAnswerCorrectCount {
             guard let girlsName = SetupTeam.shared.girlsName else { return }
             winningTeam = "Победила команда: \(girlsName)"
@@ -53,10 +51,6 @@ class ResultViewController: BasicViewController {
         
         cupImageView.contentMode = .scaleAspectFit
         setupConstraints()
-    }
-    
-    private func setupNavigationBar() {
-        navigationController?.navigationItem.leftBarButtonItem = nil
     }
 }
 
