@@ -132,6 +132,8 @@
 		8949F4AC2900410D00A77EDB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				89C60464290162FE0071A198 /* DataStorage.swift */,
+				8AEBA1DB2983A7B80028A008 /* QuestionStore.swift */,
 				8AB4E2D229003D0400195D17 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -167,10 +169,8 @@
 		89C604662901646A0071A198 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				89C60464290162FE0071A198 /* DataStorage.swift */,
 				8A7BCDAA297E3F99003DD681 /* UserSettings.swift */,
 				8AEBA1D92983A37F0028A008 /* QuestionManagrer.swift */,
-				8AEBA1DB2983A7B80028A008 /* QuestionStore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";

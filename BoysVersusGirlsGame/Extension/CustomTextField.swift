@@ -25,6 +25,7 @@ class CustomTextField: UIView  {
         textField.borderStyle = .none
         textField.font = font
         
+        
         if isShadow {
             self.layer.shadowColor = UIColor.black.cgColor
             self.layer.shadowRadius = 4
@@ -35,7 +36,10 @@ class CustomTextField: UIView  {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .center
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.attributedPlaceholder = NSAttributedString(string: "Введите название команды...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.placeholderColor()])
+        textField.attributedPlaceholder = NSAttributedString(
+            string: "Введите название команды...",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.placeholderTextColor()]
+        )
         addSubview(imageView)
         addSubview(textField)
         

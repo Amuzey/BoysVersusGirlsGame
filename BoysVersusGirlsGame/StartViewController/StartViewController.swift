@@ -12,13 +12,14 @@ final class StartViewController: BasicViewController {
     //MARK: - Private properties
     private let logoImageView = UIImageView(image: UIImage(named: "Logo"), contentMode: .scaleAspectFit)
     private let startButton = UIButton(title: "Начать", titleColor: .white)
-
+    
     private var viewModel: StartViewModelProtocol?
     
     //MARK: - Life cicles
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        UserSetting.numberOfQuestion = 3
         viewModel = StartViewModel()
         startButton.addTarget(self, action: #selector(moveToStart), for: .touchUpInside)
         setupNavigationBar()
