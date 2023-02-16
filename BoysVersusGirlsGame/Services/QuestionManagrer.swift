@@ -12,7 +12,7 @@ class QuestionManager {
     static func getGirlQuestions() -> [Question] {
         var questions: [Question] = []
 
-        for question in QuestionStore().questions {
+        for question in QuestionStore().questions.shuffled() {
             if questions.count == Int(UserSetting.numberOfQuestion) {
                 break
             }
@@ -26,7 +26,7 @@ class QuestionManager {
     static func getBoysQuestions() -> [Question]{
         var questions: [Question] = []
         
-        for question in QuestionStore().questions {
+        for question in QuestionStore().questions.shuffled() {
             if questions.count == Int(UserSetting.numberOfQuestion)  {
                 break
             }

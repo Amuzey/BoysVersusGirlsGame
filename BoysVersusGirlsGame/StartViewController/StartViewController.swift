@@ -9,11 +9,13 @@ import UIKit
 
 final class StartViewController: BasicViewController {
     
-    private let logoImageView = UIImageView(image: UIImage(named: "Logo"))
+    //MARK: - Private properties
+    private let logoImageView = UIImageView(image: UIImage(named: "Logo"), contentMode: .scaleAspectFit)
     private let startButton = UIButton(title: "Начать", titleColor: .white)
-    
+
     private var viewModel: StartViewModelProtocol?
     
+    //MARK: - Life cicles
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +25,7 @@ final class StartViewController: BasicViewController {
         setupConstraints()
     }
     
+    //MARK: - Private methods
     private func setupNavigationBar() {
         
         let rulesButton = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))

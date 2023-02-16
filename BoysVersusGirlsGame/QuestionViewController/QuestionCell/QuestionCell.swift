@@ -1,5 +1,5 @@
 //
-//  QuestionCollectionViewCell.swift
+//  QuestionCell.swift
 //  BoysVersusGirlsGame
 //
 //  Created by Алексей on 04.02.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class QuestionCollectionViewCell: UICollectionViewCell {
+class QuestionCell: UICollectionViewCell {
     
     var imageView = UIImageView()
     var label = UILabel()
@@ -56,6 +56,7 @@ class QuestionCollectionViewCell: UICollectionViewCell {
             imageView.image = UIImage(named: question.image)
         case 1:
             label.text = question.title
+            label.numberOfLines = 0
         case 2:
             label.text = question.answer[0].title
         case 3:

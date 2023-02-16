@@ -22,6 +22,7 @@ class StartRoundViewController: BasicViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         gameButton.addTarget(self, action: #selector(startGame), for: .touchUpInside)
         setupConstrains()
     }
@@ -30,7 +31,7 @@ class StartRoundViewController: BasicViewController {
 //MARK: - objc Method
 extension StartRoundViewController {
     @objc func startGame() {
-        let gameVC = GameViewController()
+        let gameVC = QuestionViewController()
         navigationController?.pushViewController(gameVC, animated: true)
     }
 }
